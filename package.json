@@ -1,28 +1,37 @@
 {
   "name": "ambition.wtf",
-  "description": "A collaboration between Luke Dubert & Trenton McBeth to create a game.",
-  "version": "0.0.1",
-  "author": "Luke Dubert <luke@dubert.me>",
-  "dependencies": {
-    "gatsby": "^1.9.247",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-netlify": "^1.0.19",
-    "gatsby-plugin-react-helmet": "^2.0.10",
-    "gatsby-plugin-sass": "^1.0.26",
-    "react-helmet": "^5.2.0"
-  },
-  "keywords": [
-    ""
-  ],
-  "license": "MIT",
+  "version": "1.0.0",
+  "description": "a website",
+  "license": "Unlicence",
   "scripts": {
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "endOfLine": "auto",
+    "htmlWhitespaceSensitivity": "css",
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": true,
+    "printWidth": 80,
+    "quoteProps": "consistent",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
   },
   "devDependencies": {
-    "prettier": "^1.12.0"
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "simple-icons": "^4.4.0",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "sirv-cli": "^1.0.0"
   }
 }
