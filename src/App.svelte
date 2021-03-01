@@ -24,7 +24,7 @@
 		<span class="nb">created by <a href="https://twitter.com/felixakiragreen" target="_blank">Felix Green</a></span>
 		<span class="nb">and <a href="https://twitter.com/Macbeth_wtf" target="_blank">Trenton McBeth</a></span>
 	</p>
-	<a href="https://hexis.wtf">
+	<a href="https://app.rarible.com/ambition_wtf?tab=created" target="_blank">
 		<img id="hexis" src="hexis_640.png" alt="Hexis Logo" />
 	</a>
 

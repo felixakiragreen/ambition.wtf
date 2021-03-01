@@ -973,7 +973,7 @@ var app = (function () {
     			footer = element("footer");
     			create_component(socials.$$.fragment);
     			attr_dev(footer, "class", "svelte-rbsehs");
-    			add_location(footer, file$3, 40, 2, 957);
+    			add_location(footer, file$3, 40, 2, 1004);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, footer, anchor);
@@ -1111,16 +1111,17 @@ var app = (function () {
     			if (img1.src !== (img1_src_value = "hexis_640.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Hexis Logo");
     			attr_dev(img1, "class", "svelte-rbsehs");
-    			add_location(img1, file$3, 27, 2, 731);
-    			attr_dev(a3, "href", "https://hexis.wtf");
+    			add_location(img1, file$3, 27, 2, 778);
+    			attr_dev(a3, "href", "https://app.rarible.com/ambition_wtf?tab=created");
+    			attr_dev(a3, "target", "_blank");
     			attr_dev(a3, "class", "svelte-rbsehs");
     			add_location(a3, file$3, 26, 1, 700);
     			set_style(span2, "color", "var(--grey-400)");
-    			add_location(span2, file$3, 31, 2, 801);
+    			add_location(span2, file$3, 31, 2, 848);
     			set_style(span3, "color", "var(--grey-100)");
-    			add_location(span3, file$3, 32, 2, 858);
-    			add_location(p3, file$3, 30, 1, 795);
-    			add_location(div0, file$3, 35, 1, 923);
+    			add_location(span3, file$3, 32, 2, 905);
+    			add_location(p3, file$3, 30, 1, 842);
+    			add_location(div0, file$3, 35, 1, 970);
     			attr_dev(div1, "class", "hexis svelte-rbsehs");
     			add_location(div1, file$3, 18, 1, 325);
     			attr_dev(main, "class", "svelte-rbsehs");
