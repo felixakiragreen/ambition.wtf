@@ -11,8 +11,8 @@
 </script>
 
 <main>
-	
-	<img id="ambition" src="ambition_640.png" />
+
+	<img id="ambition" src="ambition_sharp_flat_clean.svg" alt="Ambition Logo" />
 
 	<p>ambition.wtf presents</p>
 
@@ -22,9 +22,11 @@
 	<p>a generative hexagonal cryptoart collection</p>
 	<p>
 		<span class="nb">created by <a href="https://twitter.com/felixakiragreen" target="_blank">Felix Green</a></span>
-		<span class="nb">and <a href="https://twitter.com/trentonmcbeth" target="_blank">Trenton McBeth</a></span>
+		<span class="nb">and <a href="https://twitter.com/Macbeth_wtf" target="_blank">Trenton McBeth</a></span>
 	</p>
-	<img id="hexis" src="hexis_640.png" />
+	<a href="https://hexis.wtf">
+		<img id="hexis" src="hexis_640.png" alt="Hexis Logo" />
+	</a>
 
 	<p>
 		<span style="color: var(--grey-400);">follow us</span>
@@ -75,6 +77,7 @@
 
 	img#ambition {
 		max-width: 160px;
+		padding: 16px 0;
 	}
 
 	img#hexis {
