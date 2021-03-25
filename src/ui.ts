@@ -1,3 +1,3 @@
-import { styled, css, darkTheme } from '../stitches.config'
+import { styled, css } from '../stitches.config'
 
-export { styled, css, darkTheme }
+export { styled, css }
