@@ -85,7 +85,7 @@ export const Text = styled('span', {
       a: {
         text: '$lg',
         fontWeight: '$bold',
-        color: '$indigo',
+        color: '$felixgreen',
         textDecoration: 'none',
         display: 'inline-block',
         '&:hover': {
@@ -103,17 +103,64 @@ export const Link: React.FC = (props) => (
 )
 
 export const MonoHeading = styled(Text, {
-  textTransform: "uppercase",
+  textTransform: 'uppercase',
   fontFamily: '$mono',
 })
 
 export const UnderlinedHeading: React.FC = (props) => (
-  <MonoHeading as="h3" css={{ pb: '$4', borderBottom: "2px solid $felixgreen" }} {...props} />
+  <MonoHeading
+    as="h3"
+    css={{
+      pb: '$4',
+      borderBottom: '2px solid $felixgreen',
+      '&:before': {
+        content: ' ',
+        display: 'block',
+        height: '160px' /* fixed header height*/,
+        margin: '-160px 0 0' /* negative fixed header height */,
+        visibility: 'hidden',
+      },
+    }}
+    {...props}
+  />
 )
 
+export const UnderlinedHeadingLink = styled(Link, {
+  textTransform: 'uppercase',
+  fontFamily: '$mono',
+  borderBottom: '2px solid $felixgreen',
+  transition: '$1',
+  // fontSize: '$lg',
+  fontWeight: '$bold',
+  color: '$foreground',
+  py: '$2',
+
+  '&:hover': {
+    px: '8px',
+    mx: '-8px',
+    color: '$indigo',
+    background: '$felixgreen',
+  },
+  '&:after': {
+    '@initial': {
+      content: '',
+    },
+    '@md': {
+      content: ' tf',
+    },
+    '@lg': {
+      content: ' the fuck',
+    },
+  },
+})
+
 export const ExtraHeading: React.FC = ({ children }) => (
-  <Text css={{ "&:before": { 
-    content: `${children}`,
-    color: "$grey500"
-  }}} />
+  <Text
+    css={{
+      '&:before': {
+        content: `${children}`,
+        color: '$grey500',
+      },
+    }}
+  />
 )
