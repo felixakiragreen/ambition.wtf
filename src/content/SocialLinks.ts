@@ -41,6 +41,10 @@ export const socials: SocialLink[] = [
     ...icon_rarible,
     transform: {
       ...transform.transform,
+      translate: {
+        x: 5,
+        y: 5,
+      },
     },
   },
   // {
