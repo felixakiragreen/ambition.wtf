@@ -7,7 +7,7 @@ import { HexIcon } from './Hexagon'
 
 import { socials } from '../content/SocialLinks'
 
-import logo from '../assets/ambition_round_gradient_border.svg'
+import logo from '../assets/ambition_round_gradient_clean.svg'
 
 export const StyledFooter = styled('footer', {
   background: '$mirage',
