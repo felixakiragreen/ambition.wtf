@@ -1,31 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
 import { styled } from './ui'
 import { Text, Link } from './components'
 
-import { AccountsList } from './types'
-
 import Home from './home'
 
 /* 
 
-THINGS TO DO BEFORE I CAN GIVE TO MEGAN
-
-- [x] set up other MDXs
-- [x] all the felixkai colors
-- [x] clean up tokens → const colors → theme: { colors }
-
-- [x] header
-- [x] ambition SVGs
-
-- [ ] import the icon libary I'm using on my other site
-
-- [ ] footer
-- [ ] different theme for behind / dark!?
-
-- [ ] add placeholder shit for BUY (don't edit here)
-
+TODO
 
 
 */
@@ -36,15 +19,9 @@ export const StyledApp = styled('main', {
 })
 
 const App: React.FC = () => {
-  const [accounts, setAccounts] = useState<AccountsList>([])
-
-  function updateAccounts(accounts: AccountsList) {
-    setAccounts(accounts)
-  }
-
   return (
     <StyledApp>
-      <Home accounts={accounts} updateAccounts={updateAccounts} />
+      <Home />
     </StyledApp>
   )
 }
