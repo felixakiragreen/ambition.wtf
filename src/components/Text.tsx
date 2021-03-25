@@ -79,8 +79,7 @@ export const Text = styled('span', {
         display: 'block',
         py: '$2',
         text: '$lg',
-        fontFamily: '$main',
-        fontWeight: '$semi',
+        fontFamily: '$mono',
         lineHeight: '$2xl',
       },
       a: {
@@ -101,4 +100,20 @@ export const Text = styled('span', {
 
 export const Link: React.FC = (props) => (
   <Text as="a" css={{ cursor: 'pointer' }} {...props} />
+)
+
+export const MonoHeading = styled(Text, {
+  textTransform: "uppercase",
+  fontFamily: '$mono',
+})
+
+export const UnderlinedHeading: React.FC = (props) => (
+  <MonoHeading as="h3" css={{ pb: '$4', borderBottom: "2px solid $felixgreen" }} {...props} />
+)
+
+export const ExtraHeading: React.FC = ({ children }) => (
+  <Text css={{ "&:before": { 
+    content: `${children}`,
+    color: "$grey500"
+  }}} />
 )
