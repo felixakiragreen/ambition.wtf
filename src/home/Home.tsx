@@ -7,15 +7,11 @@ import Why from './Why.mdx'
 import What from './What.mdx'
 import Who from './Who.mdx'
 
-
-
-export const StyledAside = styled('aside', {
-  background: '$background',
-  color: '$foreground',
+export const AltBg = styled('aside', {
+  background: '$mirage',
 })
 
-type Props = {
-}
+type Props = {}
 
 export const Home: React.FC<Props> = ({}) => {
   return (
@@ -23,14 +19,14 @@ export const Home: React.FC<Props> = ({}) => {
       <Content>
         <Why />
       </Content>
-      <Content>
-        <What />
-      </Content>
-      <StyledAside>
+      <AltBg>
         <Content>
-          <Who />
+          <What />
         </Content>
-      </StyledAside>
+      </AltBg>
+      <Content>
+        <Who />
+      </Content>
     </Page>
   )
 }
