@@ -193,9 +193,8 @@ export const tokens = {
     '9xl': '8rem',
   },
   fonts: {
-    main: 'Montserrat, georgia, apple-system, sans-serif',
+    main: 'Inter, georgia, apple-system, sans-serif',
     mono: 'SF Mono, georgia, Söhne Mono, menlo, monospace',
-    inter: 'Inter, georgia, apple-system, sans-serif',
   },
   fontWeights: {
     thin: '100',
