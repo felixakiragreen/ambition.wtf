@@ -3,11 +3,17 @@ const colors = {
   indigo: '#5400fc',
   black: '#000000',
   white: '#ffffff',
-  white50: '#ffffff80',
+
   teal: '#6a8494',
-  //
-  background: '$grey900',
+  vulcan: '#11141c',
+  mirage: '#151a25',
+  background: '$vulcan',
   foreground: '$grey100',
+
+  background_50: '$vulcan_50',
+  grey900_50: '#0a0a0980',
+  vulcan_50: '#11141c80',
+  modtest: 'color-mod($background alpha(50%))',
 
   //
   grey900: '#0a0a09',
