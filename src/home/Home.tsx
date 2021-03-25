@@ -5,7 +5,7 @@ import { Page, Content } from '../components'
 
 import Hero from './Hero.mdx'
 import Faq from './Faq.mdx'
-import Behind from './Behind.mdx'
+import Who from './Who.mdx'
 
 
 
@@ -28,7 +28,7 @@ export const Home: React.FC<Props> = ({}) => {
       </Content>
       <StyledAside className={darkTheme}>
         <Content>
-          <Behind />
+          <Who />
         </Content>
       </StyledAside>
     </Page>
