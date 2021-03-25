@@ -16,6 +16,7 @@
     "framer-motion": "^4.0.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "rehype-slug": "^4.0.1",
     "simple-icons": "^4.16.0",
     "vite-plugin-mdx": "^3.2.2"
   },
