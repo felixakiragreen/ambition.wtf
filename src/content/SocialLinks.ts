@@ -1,6 +1,5 @@
 import icon_twitter from 'simple-icons/icons/twitter'
-import icon_discord from 'simple-icons/icons/discord'
-import icon_opensea from './icon_opensea'
+import icon_rarible from './icon_rarible'
 import icon_email from './icon_email'
 
 import { SocialLink } from '../types'
@@ -16,16 +15,16 @@ const transform = {
 }
 
 export const twitter: SocialLink = {
-  url: 'https://twitter.com/cryptojunks_wtf',
-  username: '@cryptojunks_wtf',
+  url: 'https://twitter.com/ambition_wtf',
+  username: '@ambition_wtf',
   ...icon_twitter,
   ...transform,
 }
 
 export const socials: SocialLink[] = [
   {
-    url: 'mailto:',
-    username: '...',
+    url: 'mailto:email@ambition.wtf',
+    username: 'email@ambition.wtf',
     ...icon_email,
     transform: {
       ...transform.transform,
@@ -35,24 +34,26 @@ export const socials: SocialLink[] = [
       },
     },
   },
-  {
-    url: 'discord:',
-    username: '...',
-    ...icon_discord,
-    ...transform,
-  },
   twitter,
   {
-    url: 'opensea',
-    username: '...',
-    ...icon_opensea,
+    url: 'https://rarible.com/ambition_wtf?tab=created',
+    username: '0xe6edbd8d56892e0ce615087d2d6b7b52dc77ac7e',
+    ...icon_rarible,
     transform: {
       ...transform.transform,
-      scale: 0.5,
-      translate: {
-        x: 10.5,
-        y: 9.5,
-      },
     },
   },
+  // {
+  //   url: '',
+  //   username: 'opensea',
+  //   ...icon_opensea,
+  //   transform: {
+  //     ...transform.transform,
+  //     scale: 0.5,
+  //     translate: {
+  //       x: 10.5,
+  //       y: 9.5,
+  //     },
+  //   },
+  // },
 ]
