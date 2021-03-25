@@ -2,7 +2,7 @@
   "name": "ambition.wtf",
   "version": "1.0.0",
   "description": "a website",
-  "license": "Unlicence",
+  "license": "Unlicense",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
