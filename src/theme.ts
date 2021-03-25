@@ -6,8 +6,8 @@ const colors = {
   white50: '#ffffff80',
   teal: '#6a8494',
   //
-  background: '$white',
-  foreground: '$grey900',
+  background: '$grey900',
+  foreground: '$grey100',
 
   //
   grey900: '#0a0a09',
@@ -162,13 +162,6 @@ const max = {
 // max-w-screen-lg	max-width: 1024px;
 // max-w-screen-xl	max-width: 1280px;
 // max-w-screen-2xl	max-width: 1536px;
-
-export const darkTokens = {
-  colors: {
-    foreground: '$grey100',
-    background: '$grey700',
-  },
-}
 
 export const tokens = {
   colors,

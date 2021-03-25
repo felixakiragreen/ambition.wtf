@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled, darkTheme } from '../ui'
+import { styled } from '../ui'
 
 import { Content, Box, Img } from './Box'
 import { Text, Link } from './Text'
@@ -16,7 +16,7 @@ export const StyledFooter = styled('footer', {
 
 export const Footer: React.FC = ({ children }) => {
   return (
-    <StyledFooter className={darkTheme}>
+    <StyledFooter>
       <Content>
         <Box align="centerX" justify="spaceBetweenX">
           <Box align="centerX" spacing="x">

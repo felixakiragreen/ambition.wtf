@@ -1,6 +1,6 @@
 import { createCss } from '@stitches/react'
 
-import { tokens, darkTokens, utils } from './src/theme'
+import { tokens, utils } from './src/theme'
 
 export const { styled, css, theme } = createCss({
   prefix: '',
@@ -13,8 +13,4 @@ export const { styled, css, theme } = createCss({
     '2xl': '(min-width: 1536px)',
   },
   utils,
-})
-
-export const darkTheme = theme({
-  ...darkTokens,
 })

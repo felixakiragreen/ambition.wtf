@@ -2,7 +2,7 @@ import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
 import { styled } from './ui'
-import { Text, Link } from './components'
+import { Text, Link, UnderlinedHeading } from './components'
 
 import Home from './home'
 
@@ -29,7 +29,7 @@ const App: React.FC = () => {
 const components = {
   h1: (props) => <Text as="h1" mdx="h1" {...props} />,
   h2: (props) => <Text as="h2" mdx="h2" {...props} />,
-  h3: (props) => <Text as="h3" mdx="h3" {...props} />,
+  h3: (props) => <UnderlinedHeading {...props} />,
   h4: (props) => <Text as="h4" mdx="h4" {...props} />,
   h5: (props) => <Text as="h5" mdx="h5" {...props} />,
   h6: (props) => <Text as="h6" mdx="h6" {...props} />,
