@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { styled, darkTheme } from '../ui'
+import { styled } from '../ui'
 import { Page, Content } from '../components'
 
-import Hero from './Hero.mdx'
-import Faq from './Faq.mdx'
+import Why from './Why.mdx'
+import What from './What.mdx'
 import Who from './Who.mdx'
 
 
@@ -21,12 +21,12 @@ export const Home: React.FC<Props> = ({}) => {
   return (
     <Page>
       <Content>
-        <Hero />
+        <Why />
       </Content>
       <Content>
-        <Faq />
+        <What />
       </Content>
-      <StyledAside className={darkTheme}>
+      <StyledAside>
         <Content>
           <Who />
         </Content>
