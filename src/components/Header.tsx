@@ -2,19 +2,18 @@ import React from 'react'
 import { styled } from '../ui'
 
 import { Content, Box, Img } from './Box'
-import { Text, Link } from './Text'
+import { Text, Link, UnderlinedHeadingLink } from './Text'
 import { Svg } from './Svg'
 
-import logo from '../assets/ambition_sharp_flat_clean.svg'
+import logo from '../assets/ambition_round_flat_border.svg'
 import { twitter } from '../content/SocialLinks'
 
 export const StyledHeader = styled('header', {
-  // position: 'sticky',
-  // top: '$0',
-  background: '$white50',
+  position: 'sticky',
+  top: '$0',
+  background: '$background_50',
   color: '$foreground',
   backdropFilter: 'blur(10px)',
-  // boxShadow: '$lg, $popup',
 })
 
 export const Header: React.FC = ({ children }) => {
@@ -43,8 +42,6 @@ export const Header: React.FC = ({ children }) => {
             },
             '&>a #peepee': {
               p: '$2',
-              fontWeight: '$bold',
-              color: '$foreground',
               transition: '$1',
             },
             '&>a:hover #peepee': {
@@ -58,14 +55,13 @@ export const Header: React.FC = ({ children }) => {
               align="centerX"
               spacing="x"
               css={{
-                fontFamily: '$inter',
-                fontWeight: '$bold',
-                letterSpacing: '-1px',
+                fontFamily: '$main',
+                fontWeight: '$black',
                 gap: '$4',
               }}
             >
-              <Img src={logo} alt="Ambition logo" css={{ height: '$12' }} />
-              <Text size="3xl" id="peepee">
+              <Img src={logo} alt="Ambition logo" css={{ height: '$16' }} />
+              <Text size="4xl" id="peepee">
                 <Text>ambition</Text>
                 <Text css={{ color: '$grey500' }}>.wtf</Text>
               </Text>
@@ -75,29 +71,20 @@ export const Header: React.FC = ({ children }) => {
             align="centerX"
             css={{
               gap: '$4',
-              transition: '$1',
-              '&>a': {
-                p: '$2',
-                fontFamily: '$main',
-                fontSize: '$xl',
-                fontWeight: '$bold',
-                color: '$foreground',
-                transition: '$1',
-              },
-              '&>a:hover': {
-                color: '$indigo',
-                background: '$felixgreen',
-              },
             }}
           >
-            <Link>About</Link>
-            <Link href={twitter.url} target="_blank">
-              <Box css={{ size: '$6' }}>
-                <Svg viewBox="0 0 24 24">
-                  <path d={twitter.path} fill="currentcolor" />
-                </Svg>
-              </Box>
-            </Link>
+            <UnderlinedHeadingLink href="#why-the-fuck-about">
+              Why
+            </UnderlinedHeadingLink>
+            <UnderlinedHeadingLink href="#what-the-fuck-projects">
+              What
+            </UnderlinedHeadingLink>
+            <UnderlinedHeadingLink href="#who-the-fuck-team">
+              Who
+            </UnderlinedHeadingLink>
+            <UnderlinedHeadingLink href="#where-the-fuck-socials">
+              Where
+            </UnderlinedHeadingLink>
           </Box>
         </Box>
       </Content>
