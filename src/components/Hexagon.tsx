@@ -10,9 +10,8 @@ type HexagonProps = {
 }
 
 export const Hexagon: React.FC<HexagonProps> = ({ children, fill }) => {
-  // x="0%" y="0%" width="100%" height="100%"
   return (
-    <Svg viewBox="0 0 36 36">
+    <Svg viewBox="0 0 36 36" width="100%" height="100%">
       <path fill="none" d="M0 0H36V36H0z" />
       <path fill={fill} d="M18 0l15.588 9v18L18 36 2.412 27V9L18 0z" />
       {children}
@@ -21,9 +20,8 @@ export const Hexagon: React.FC<HexagonProps> = ({ children, fill }) => {
 }
 
 export const RoundedHexagon: React.FC<HexagonProps> = ({ children, fill }) => {
-  // x="0%" y="0%" width="100%" height="100%"
   return (
-    <Svg viewBox="0 0 36 36">
+    <Svg viewBox="0 0 36 36" width="100%" height="100%">
       <path fill="none" d="M0 0H36V36H0z" />
       <path
         fill={fill}
@@ -34,13 +32,14 @@ export const RoundedHexagon: React.FC<HexagonProps> = ({ children, fill }) => {
   )
 }
 
-export const StyledIcon = styled('a', {
+// TODO: I think this should be moved...
+
+export const StyledHexIcon = styled('a', {
   display: 'flex',
   size: '$16',
-  transition: '$1',
-  color: '$blue200',
 
   svg: {
+    transition: '$1', // NEEDED
     '#foreground': {
       fill: '$black',
     },
@@ -61,18 +60,18 @@ export const HexIcon: React.FC<SocialLink> = ({
   transform,
 }) => {
   return (
-    <StyledIcon
+    <StyledHexIcon
       href={url}
       target="_blank"
       css={{ color: `#${hex}`, '&:hover': { color: '$felixgreen' } }}
     >
-      <RoundedHexagon fill="currentcolor">
+      <RoundedHexagon fill={'currentColor'}>
         <g
           transform={`translate(${transform.translate.x},${transform.translate.y}) scale(${transform.scale})`}
         >
           <path d={path} id="foreground" />
         </g>
       </RoundedHexagon>
-    </StyledIcon>
+    </StyledHexIcon>
   )
 }
