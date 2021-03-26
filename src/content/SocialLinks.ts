@@ -61,3 +61,40 @@ export const socials: SocialLink[] = [
   //   },
   // },
 ]
+
+interface SocialPersonals {
+  [key: string]: SocialLink[]
+}
+
+export const socialsPersonal: SocialPersonals = {
+  fag: [
+    {
+      url: 'https://twitter.com/felixakiragreen',
+      username: '@felixakiragreen',
+      ...icon_twitter,
+      ...transform,
+    },
+    {
+      url: 'https://twitter.com/impetuous_fag',
+      username: '@impetuous_fag',
+      ...icon_twitter,
+      ...transform,
+    },
+  ],
+  tlm: [
+    {
+      url: 'https://twitter.com/macbeth_wtf',
+      username: '@macbeth_wtf',
+      ...icon_twitter,
+      ...transform,
+    },
+  ],
+  mlm: [
+    {
+      url: 'https://twitter.com/meganmcnames',
+      username: '@meganmcnames',
+      ...icon_twitter,
+      ...transform,
+    },
+  ],
+}
