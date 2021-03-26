@@ -12,6 +12,7 @@ export const StyledHeader = styled('header', {
   background: '$background_50',
   color: '$foreground',
   backdropFilter: 'blur(10px)',
+  '-webkit-backdrop-filter': 'blur(10px)',
 })
 
 export const Header: React.FC = ({ children }) => {
@@ -30,9 +31,6 @@ export const Header: React.FC = ({ children }) => {
             },
             '@md': {
               py: '$4',
-            },
-            '@lg': {
-              py: '$8',
             },
             a: {
               color: '$foreground',
