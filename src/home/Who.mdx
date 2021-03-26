@@ -1,4 +1,12 @@
-import { Box, Img, Text, ExtraHeading } from '../components'
+import {
+  Box,
+  Img,
+  Text,
+  ExtraHeading,
+  SocialTwitter,
+  SocialHexIcon,
+} from '../components'
+import { socialsPersonal } from '../content/SocialLinks'
 
 import avatar_fag from '../assets/avatar_fag_round_gradient.svg'
 import avatar_tlm from '../assets/avatar_tlm_round_gradient.svg'
@@ -7,11 +15,64 @@ import avatar_otm from '../assets/avatar_otm_round_gradient.svg'
 
 ### Who the fuck <ExtraHeading>(Team)</ExtraHeading>
 
-<Box direction="h" spacing="x" css={{ py: '$8' }}>
-  <Img src={avatar_fag} alt="Avatar for F.A.G." css={{ size: '$48' }} />
-  <Img src={avatar_tlm} alt="Avatar for Macbeth" css={{ size: '$48' }} />
-  <Img src={avatar_mlm} alt="Avatar for M.L.M" css={{ size: '$48' }} />
-  <Img src={avatar_otm} alt="Avatar for O.T.M." css={{ size: '$48' }} />
-</Box>
+<Box direction="h" spacing="x" justify="spaceBetweenX" css={{ py: '$8' }}>
+  
+  <Box direction="v" >
+    <Img src={avatar_fag} alt="avatar for F.A.G." css={{ size: '$48', py: "$4" }} />
+    
+    <Text mdx="h3">felix <Text css={{ color: '$felixgreen' }}>green</Text></Text>
+    <Text css={{ display: "block", pt: "$3" }}>the hacker</Text>
+    <Box align="centerX">
+      {socialsPersonal.fag.map(social => (
+        <SocialHexIcon key={social.url} {...social} />
+      ))}
+    </Box>
+  </Box>
 
-<Text css={{ color: '$felixgreen', fontWeight: '$bold' }}>Us</Text>
+  <Box direction="v">
+    <Img
+      src={avatar_tlm}
+      alt="avatar for macbeth"
+      css={{ size: '$48', py: '$4' }}
+    />
+
+    <Text mdx="h3">macbeth</Text>
+    <Text css={{ display: 'block', pt: '$3' }}>the art forger</Text>
+    <Box align="centerX">
+      {socialsPersonal.tlm.map((social) => (
+        <SocialHexIcon key={social.url} {...social} />
+      ))}
+    </Box>
+
+  </Box>
+
+  <Box direction="v">
+    <Img
+      src={avatar_mlm}
+      alt="avatar for mlem"
+      css={{ size: '$48', py: '$4' }}
+    />
+
+    <Text mdx="h3">mlem</Text>
+    <Text css={{ display: 'block', pt: '$3' }}>the mastermind</Text>
+    <Box align="centerX">
+      {socialsPersonal.mlm.map((social) => (
+        <SocialHexIcon key={social.url} {...social} />
+      ))}
+    </Box>
+
+  </Box>
+
+  <Box direction="v">
+    <Img
+      src={avatar_otm}
+      alt="avatar for o"
+      css={{ size: '$48', py: '$4' }}
+    />
+
+    <Text mdx="h3">o</Text>
+    <Text css={{ display: 'block', pt: '$3' }}>the cat burglar</Text>
+
+  </Box>
+
+</Box>
