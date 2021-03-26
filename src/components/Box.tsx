@@ -75,7 +75,7 @@ export const Box = styled('div', {
 export const Content = styled('div', {
   mx: 'auto',
   maxWidth: '$screen-lg',
-  py: '$4',
+  py: '$8',
 
   '@initial': {
     px: '$4',

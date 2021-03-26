@@ -47,32 +47,32 @@ export const Text = styled('span', {
     mdx: {
       h1: {
         text: '$5xl',
-        fontFamily: '$main',
+        fontFamily: '$sans',
         fontWeight: '$bold',
       },
       h2: {
         text: '$4xl',
-        fontFamily: '$main',
+        fontFamily: '$sans',
         fontWeight: '$bold',
       },
       h3: {
         text: '$3xl',
-        fontFamily: '$main',
+        fontFamily: '$sans',
         fontWeight: '$bold',
       },
       h4: {
         text: '$2xl',
-        fontFamily: '$main',
+        fontFamily: '$sans',
         fontWeight: '$bold',
       },
       h5: {
         text: '$xl',
-        fontFamily: '$main',
+        fontFamily: '$sans',
         fontWeight: '$bold',
       },
       h6: {
         text: '$lg',
-        fontFamily: '$main',
+        fontFamily: '$sans',
         fontWeight: '$bold',
       },
       p: {
@@ -113,12 +113,14 @@ export const UnderlinedHeading: React.FC = (props) => (
     css={{
       pb: '$4',
       borderBottom: '2px solid $felixgreen',
+      pointerEvents: 'none', // necessary to not cover any shit up
       '&:before': {
         content: ' ',
         display: 'block',
-        height: '160px' /* fixed header height*/,
-        margin: '-160px 0 0' /* negative fixed header height */,
+        height: '$40' /* fixed header height*/,
+        marginTop: '$-40' /* negative fixed header height */,
         visibility: 'hidden',
+        zIndex: '-9999',
       },
     }}
     {...props}
@@ -130,14 +132,13 @@ export const UnderlinedHeadingLink = styled(Link, {
   fontFamily: '$mono',
   borderBottom: '2px solid $felixgreen',
   transition: '$1',
-  // fontSize: '$lg',
   fontWeight: '$bold',
   color: '$foreground',
   py: '$2',
 
   '&:hover': {
-    px: '8px',
-    mx: '-8px',
+    px: '$2',
+    mx: '$-2',
     color: '$indigo',
     background: '$felixgreen',
   },

@@ -51,7 +51,7 @@ styled popup
 */
 
 export const StyledPopup = styled('div', {
-  fontFamily: '$main',
+  fontFamily: '$sans',
   backgroundColor: '$white',
   color: '$felixgreen',
   boxShadow: '$lg, $popup',

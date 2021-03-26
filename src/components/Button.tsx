@@ -1,7 +1,7 @@
 import { styled } from '../ui'
 
 export const Button = styled('button', {
-  fontFamily: '$main',
+  fontFamily: '$sans',
   backgroundColor: '$indigo',
   color: '$white',
   borderRadius: '9999px',
