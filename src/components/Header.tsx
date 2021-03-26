@@ -3,10 +3,8 @@ import { styled } from '../ui'
 
 import { Content, Box, Img } from './Box'
 import { Text, Link, UnderlinedHeadingLink } from './Text'
-import { Svg } from './Svg'
 
 import logo from '../assets/ambition_round_flat_border.svg'
-import { twitter } from '../content/SocialLinks'
 
 export const StyledHeader = styled('header', {
   position: 'sticky',
@@ -55,7 +53,7 @@ export const Header: React.FC = ({ children }) => {
               align="centerX"
               spacing="x"
               css={{
-                fontFamily: '$main',
+                fontFamily: '$sans',
                 fontWeight: '$black',
                 gap: '$4',
               }}
