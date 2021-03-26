@@ -2,10 +2,8 @@ import React from 'react'
 import { styled } from '../ui'
 
 import { Content, Box, Img } from './Box'
-import { Text, Link, UnderlinedHeading, ExtraHeading } from './Text'
-import { HexIcon } from './Hexagon'
-
-import { socials } from '../content/SocialLinks'
+import { Link, UnderlinedHeading, ExtraHeading } from './Text'
+import { Socials } from './Socials'
 
 import logo from '../assets/ambition_round_gradient_clean.svg'
 
@@ -13,7 +11,7 @@ export const StyledFooter = styled('footer', {
   background: '$mirage',
 })
 
-export const Footer: React.FC = ({ children }) => {
+export const Footer: React.FC = () => {
   return (
     <StyledFooter>
       <Content>
@@ -22,11 +20,7 @@ export const Footer: React.FC = ({ children }) => {
             <UnderlinedHeading id="where-the-fuck">
               Where the fuck<ExtraHeading> (Socials)</ExtraHeading>
             </UnderlinedHeading>
-            <Box align="centerX" spacing="x">
-              {socials.map((social) => (
-                <HexIcon key={social.title} {...social} />
-              ))}
-            </Box>
+            <Socials />
           </Box>
           <Box>
             <Link href="http://ambition.wtf" target="_blank">
