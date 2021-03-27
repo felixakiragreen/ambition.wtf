@@ -27,6 +27,9 @@ export const Button = styled('button', {
       },
     },
   },
+  defaultVariants: {
+    size: 'md',
+  },
 
   // Pseudo-class selector
   '&:hover:enabled': {
