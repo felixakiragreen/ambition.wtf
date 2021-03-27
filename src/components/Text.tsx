@@ -88,10 +88,13 @@ export const Text = styled('span', {
         color: '$felixgreen',
         textDecoration: 'none',
         display: 'inline-block',
+        transition: '$1',
         '&:hover': {
           backgroundColor: '$felixgreen',
           color: '$indigo',
           cursor: 'pointer',
+          px: '$1',
+          mx: '$-1',
         },
       },
     },
