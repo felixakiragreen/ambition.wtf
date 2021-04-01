@@ -91,8 +91,8 @@ export const socialsPersonal: SocialPersonals = {
   ],
   mlm: [
     {
-      url: 'https://twitter.com/meganmcnames',
-      username: '@meganmcnames',
+      url: 'https://twitter.com/mcnames1',
+      username: '@mcnames1',
       ...icon_twitter,
       ...transform,
     },
