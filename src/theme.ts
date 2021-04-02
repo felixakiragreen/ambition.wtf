@@ -229,7 +229,11 @@ export const tokens = {
     '8xl': '1',
     '9xl': '1',
   },
-  //
+  // letterSpacings: {},
+  // sizes: {},
+  // borderWidths: {},
+  // borderStyles: {},
+  // radii: {},
   shadows: {
     popup: '0 0 6px 0 rgba(0, 0, 0, 0.67)',
     sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -244,6 +248,7 @@ export const tokens = {
     inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
     none: 'none',
   },
+  // zIndices: {},
   transitions: {
     1: 'all cubic-bezier(0.4, 0, 0.2, 1) 150ms',
   },
