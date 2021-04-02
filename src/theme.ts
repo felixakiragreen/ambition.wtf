@@ -221,7 +221,7 @@ export const tokens = {
     lg: '1.75rem',
     xl: '1.75rem',
     '2xl': '2rem',
-    '3xl': '2.25rem;',
+    '3xl': '2.25rem',
     '4xl': '2.5rem',
     '5xl': '1',
     '6xl': '1',
