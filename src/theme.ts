@@ -315,20 +315,27 @@ export const utils = {
     width: value,
     height: value,
   }),
-  // sx: (config) => (value) => ({
-  //   gap: value,
-  //   // '& > * + *': {
-  //   //   marginLeft: `$space${value}`,
-  //   //   // marginRight: `$space${value}`,
-  //   // },
-  // }),
-  // sy: (config) => (value) => ({
-  //   gap: value,
-  //   // '& > * + *': {
-  //   //   marginTop: `$space${value}`,
-  //   //   // marginBottom: `$space${value}`,
-  //   // },
-  // }),
+  sx: (config) => (value) => ({
+    // Unfortunately gap doesn't work on mobile Safari
+    // gap: value,
+    '& > * + *': {
+      ml: value,
+    },
+  }),
+  sy: (config) => (value) => ({
+    // Unfortunately gap doesn't work on mobile Safari
+    // gap: value,
+    '& > * + *': {
+      mt: value,
+    },
+  }),
+  backdropFilter: (config) => (value) => ({
+    backdropFilter: value,
+    '-webkit-backdrop-filter': value,
+  }),
+  linearGradient: (config) => (value) => ({
+    backgroundImage: `linear-gradient(${value})`,
+  }),
 }
 
 // --tw-space-y-reverse: 0;
