@@ -51,14 +51,24 @@ export const Text = styled('span', {
         fontWeight: '$bold',
       },
       h2: {
-        text: '$4xl',
         fontFamily: '$sans',
         fontWeight: '$bold',
+        '@initial': {
+          text: '$md',
+        },
+        '@md': {
+          text: '$xl',
+        },
       },
       h3: {
-        text: '$3xl',
         fontFamily: '$sans',
         fontWeight: '$bold',
+        '@initial': {
+          text: '$xl',
+        },
+        '@md': {
+          text: '$2xl',
+        },
       },
       h4: {
         text: '$2xl',
@@ -78,9 +88,16 @@ export const Text = styled('span', {
       p: {
         display: 'block',
         py: '$2',
-        text: '$lg',
         fontFamily: '$mono',
-        lineHeight: '$2xl',
+        '@initial': {
+          text: '$sm',
+        },
+        '@sm': {
+          text: '$md',
+        },
+        '@md': {
+          text: '$lg',
+        },
       },
       a: {
         text: '$lg',
@@ -112,9 +129,15 @@ export const MonoHeading = styled(Text, {
 
 export const UnderlinedHeading: React.FC = (props) => (
   <MonoHeading
-    as="h3"
+    as="h2"
+    mdx="h2"
     css={{
-      pb: '$4',
+      '@initial': {
+        pb: '$2',
+      },
+      '@md': {
+        pb: '$4',
+      },
       borderBottom: '2px solid $felixgreen',
       pointerEvents: 'none', // necessary to not cover any shit up
       '&:before': {

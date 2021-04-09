@@ -12,7 +12,15 @@ import { SocialLink } from '../types'
 
 export const Socials: React.FC = ({ children }) => {
   return (
-    <Box align="centerX" spacing="x">
+    <Box
+      align="centerX"
+      spacing="x"
+      css={{
+        display: 'flex',
+        '@initial': { justifyContent: 'center' },
+        '@sm': { justifyContent: 'left' },
+      }}
+    >
       {socials.map((social) => (
         <HexIcon key={social.title} {...social} />
       ))}

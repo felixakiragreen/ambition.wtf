@@ -28,10 +28,20 @@ export const Box = styled('div', {
     },
     spacing: {
       x: {
-        gap: '$4',
+        '@initial': {
+          sx: '$2',
+        },
+        '@md': {
+          sx: '$4',
+        },
       },
       y: {
-        gap: '$4',
+        '@initial': {
+          sy: '$2',
+        },
+        '@md': {
+          sy: '$4',
+        },
       },
     },
     align: {
@@ -75,7 +85,7 @@ export const Box = styled('div', {
 export const Content = styled('div', {
   mx: 'auto',
   maxWidth: '$screen-lg',
-  py: '$8',
+  py: '$4',
 
   '@initial': {
     px: '$4',

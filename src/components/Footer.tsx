@@ -15,8 +15,23 @@ export const Footer: React.FC = () => {
   return (
     <StyledFooter>
       <Content>
-        <Box align="centerX" justify="spaceBetweenX">
-          <Box>
+        <Box
+          align="centerX"
+          justify="spaceBetweenX"
+          css={{
+            display: 'flex',
+            '@initial': { flexDirection: 'column' },
+            '@sm': { flexDirection: 'row' },
+          }}
+        >
+          <Box
+            direction="v"
+            css={{
+              // display: 'flex',
+              '@initial': { justifyContent: 'center' },
+              '@sm': {},
+            }}
+          >
             <UnderlinedHeading id="where-the-fuck">
               Where the fuck<ExtraHeading> (Socials)</ExtraHeading>
             </UnderlinedHeading>
@@ -24,7 +39,11 @@ export const Footer: React.FC = () => {
           </Box>
           <Box>
             <Link href="http://ambition.wtf" target="_blank">
-              <Img src={logo} alt="Ambition logo" css={{ height: '$48' }} />
+              <Img
+                src={logo}
+                alt="Ambition logo"
+                css={{ py: '$12', height: '$48' }}
+              />
             </Link>
           </Box>
         </Box>

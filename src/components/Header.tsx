@@ -25,62 +25,88 @@ export const Header: React.FC = ({ children }) => {
           css={{
             '@initial': {
               py: '$0',
+              flexDirection: 'column',
             },
             '@sm': {
               py: '$2',
             },
             '@md': {
               py: '$4',
+              flexDirection: 'row',
             },
             a: {
               color: '$foreground',
               textDecoration: 'none',
             },
-            '&>a #peepee': {
-              p: '$2',
-              transition: '$1',
-            },
-            '&>a:hover #peepee': {
-              color: '$indigo',
-              background: '$felixgreen',
-            },
           }}
         >
-          <Link href="http://ambition.wtf" target="_blank">
-            <Box
-              align="centerX"
-              spacing="x"
+          <Box
+            align="centerX"
+            spacing="x"
+            css={{
+              fontFamily: '$sans',
+              fontWeight: '$black',
+              sx: '$4',
+            }}
+          >
+            <Img
+              src={logo}
+              alt="Ambition logo"
               css={{
-                fontFamily: '$sans',
-                fontWeight: '$black',
-                gap: '$4',
+                '@initial': {
+                  height: '$12',
+                },
+                '@sm': {
+                  height: '$16',
+                },
+              }}
+            />
+            <Text
+              css={{
+                '@initial': {
+                  text: '$3xl',
+                },
+                '@sm': {
+                  text: '$4xl',
+                },
               }}
             >
-              <Img src={logo} alt="Ambition logo" css={{ height: '$16' }} />
-              <Text size="4xl" id="peepee">
-                <Text>ambition</Text>
-                <Text css={{ color: '$grey500' }}>.wtf</Text>
-              </Text>
-            </Box>
-          </Link>
+              <Text>ambition</Text>
+              <Text css={{ color: '$grey500' }}>.wtf</Text>
+            </Text>
+          </Box>
           <Box
             align="centerX"
             css={{
-              gap: '$4',
+              sx: '$4',
+              '@initial': {
+                pt: '$4',
+              },
+              '@md': {
+                pt: '$0',
+              },
             }}
           >
-            <UnderlinedHeadingLink href="#why-the-fuck-about">
-              Why
-            </UnderlinedHeadingLink>
-            <UnderlinedHeadingLink href="#what-the-fuck-projects">
-              What
-            </UnderlinedHeadingLink>
-            <UnderlinedHeadingLink href="#who-the-fuck-team">
-              Who
-            </UnderlinedHeadingLink>
-            <UnderlinedHeadingLink href="#where-the-fuck-socials">
-              Where
-            </UnderlinedHeadingLink>
+            <Box>
+              <UnderlinedHeadingLink href="#why-the-fuck-about">
+                Why
+              </UnderlinedHeadingLink>
+            </Box>
+            <Box>
+              <UnderlinedHeadingLink href="#what-the-fuck-projects">
+                What
+              </UnderlinedHeadingLink>
+            </Box>
+            <Box>
+              <UnderlinedHeadingLink href="#who-the-fuck-team">
+                Who
+              </UnderlinedHeadingLink>
+            </Box>
+            <Box>
+              <UnderlinedHeadingLink href="#where-the-fuck-socials">
+                Where
+              </UnderlinedHeadingLink>
+            </Box>
           </Box>
         </Box>
       </Content>
