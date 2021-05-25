@@ -87,17 +87,30 @@
 				},
 				h4: {
 					text: '$2xl',
-					fontWeight: '$bold',
+					'@initial': {
+						text: '$xl',
+					},
+					'@md': {
+						text: '$2xl',
+					},
 				},
 				h5: {
-					text: '$xl',
 					fontWeight: '$bold',
-					// mt: '$12',
-					// mb: '$4',
+					'@initial': {
+						text: '$lg',
+					},
+					'@md': {
+						text: '$xl',
+					},
 				},
 				h6: {
-					text: '$lg',
 					fontWeight: '$bold',
+					'@initial': {
+						text: '$md',
+					},
+					'@md': {
+						text: '$lg',
+					},
 				},
 				p: {
 					display: 'block',
