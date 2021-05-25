@@ -1,59 +1,79 @@
 <script lang="ts">
-  import logo from '../assets/ambition_round_flat_border.svg'
-	import Section from '$lib/Section.svelte'
+	import { stitch } from '@/ui'
+
+	import Box from '$lib/atoms/Box.svelte'
+	import Image from '$lib/atoms/Image.svelte'
+	import Content from '$lib/bonds/Content.svelte'
+	import Inline from '$lib/bonds/Inline.svelte'
+	import Text from '$lib/bonds/Text.svelte'
+	import HeadingLink from '$lib/comps/HeadingLink.svelte'
+
+	import logo from '../assets/ambition_round_flat_border.svg'
+
+	const ss = stitch({
+		position: 'sticky',
+		top: '$0',
+		background: '$background_50',
+		color: '$foreground',
+		backdropFilter: 'blur(10px)',
+	})
 </script>
 
-<header>
-	<Section>
-		<div class="flex items-center gap-4">
-			<img src={logo} alt="Ambition hexagonal logo" />
-			<h1>ambition<span class="text-grey-500">.wtf</span></h1>
-		</div>
-
-		<nav>
-			<a href="#why-the-fuck-about">Why</a>
-			<a href="#what-the-fuck-projects">What</a>
-			<a href="#who-the-fuck-team">Who</a>
-			<a href="#where-the-fuck-socials">Where</a>
-		</nav>
-	</Section>
+<header class={ss()}>
+	<Content>
+		<Inline
+			collapseBelow="md"
+			align="center"
+			spaceV="sm"
+			css={{
+				justifyContent: 'space-between',
+				'@initial': {
+					py: '$0',
+				},
+				'@sm': {
+					py: '$2',
+				},
+				'@md': {
+					py: '$4',
+				},
+			}}>
+			<Inline
+				alignV="center"
+				space="md"
+				css={{
+					fontFamily: '$sans',
+					fontWeight: '$black',
+				}}>
+				<Image
+					url={logo}
+					alt="Ambition logo"
+					css={{
+						'@initial': {
+							height: '$12',
+						},
+						'@sm': {
+							height: '$16',
+						},
+					}} />
+				<Text
+					css={{
+						'@initial': {
+							text: '$3xl',
+						},
+						'@sm': {
+							text: '$4xl',
+						},
+					}}>
+					<Text>ambition</Text>
+					<Text css={{ color: '$grey500' }}>.wtf</Text>
+				</Text>
+			</Inline>
+			<Inline space="md">
+				<HeadingLink url="/#why">Why</HeadingLink>
+				<HeadingLink url="/#what">What</HeadingLink>
+				<HeadingLink url="/#who">Who</HeadingLink>
+				<HeadingLink url="/#where">Where</HeadingLink>
+			</Inline>
+		</Inline>
+	</Content>
 </header>
-
-<style style lang="postcss">
-	header {
-		@apply sticky;
-		@apply -top-0.5;
-		@apply bg-vulcan;
-		@apply bg-opacity-50;
-		@apply backdrop-filter backdrop-blur-md;
-	}
-
-  img {
-    @apply h-12;
-    @apply sm:h-16;
-  }
-
-	h1 {
-		@apply text-3xl;
-		@apply sm:text-4xl;
-		@apply font-black;
-	}
-
-	/* 
-
-	p {
-		@apply max-w-xs;
-		@apply my-8 mx-auto;
-		@apply leading-snug;
-	}
-
-	@screen sm {
-		h1 {
-			@apply max-w-none;
-		}
-
-		p {
-			@apply max-w-none;
-		}
-	} */
-</style>
