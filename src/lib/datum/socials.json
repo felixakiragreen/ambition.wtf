@@ -1,0 +1,42 @@
+{
+	"twitter": {
+		"url": "https://twitter.com/ambition_wtf",
+		"username": "@ambition_wtf"
+	},
+	"discord": {
+		"url": "https://discord.gg/6j65H7nqSd",
+		"username": "ambition.wtf"
+	},
+	"email": {
+		"url": "mailto:email@ambition.wtf",
+		"username": "email@ambition.wtf"
+	},
+	"rarible": {
+		"url": "https://rarible.com/ambition_wtf?tab=created",
+		"username": "0xe6edbd8d56892e0ce615087d2d6b7b52dc77ac7e"
+	},
+	"personals": {
+		"fag": [
+			{
+				"url": "https://twitter.com/felixakiragreen",
+				"username": "@felixakiragreen"
+			},
+			{
+				"url": "https://twitter.com/thecolorfelix",
+				"username": "@thecolorfelix"
+			}
+		],
+		"tlm": [
+			{
+				"url": "https://twitter.com/macbeth_wtf",
+				"username": "@macbeth_wtf"
+			}
+		],
+		"mlm": [
+			{
+				"url": "https://twitter.com/mcnames1",
+				"username": "@mcnames1"
+			}
+		]
+	}
+}
