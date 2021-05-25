@@ -28,7 +28,7 @@
 
 <Box cls={ss}>
 	<Content>
-		<HeadingUnderline id="what">
+		<HeadingUnderline id="why">
 			Why The Fuck <HeadingExtra content="(About)" />
 		</HeadingUnderline>
 		<Why />
