@@ -1,50 +1,50 @@
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte'
+	import { stitch } from '@/ui'
+
+	import Box from '@/lib/atoms/Box.svelte'
+	import Content from '@/lib/bonds/Content.svelte'
+
+	import HeadingExtra from '$lib/comps/HeadingExtra.svelte'
+	import HeadingUnderline from '$lib/comps/HeadingUnderline.svelte'
+	import Projects from '$lib/comps/Projects.svelte'
+	import Team from '$lib/comps/Team.svelte'
+
+	import Why from './_landing/Why.md'
+
+	const ss = stitch({
+		bg: '$background',
+		color: '$foreground',
+		fontFamily: '$mono',
+
+		'& h2': {
+			bg: '$red400',
+		},
+	})
+
+	const ssAlt = stitch({
+		bg: '$mirage',
+	})
 </script>
 
-<svelte:head>
-	<title>Hello world!</title>
-</svelte:head>
-
-<main>
-	<h1>Hello world!</h1>
-
-	<Counter />
-
-	<p>Visit <a class="text-blue-600 underline" href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.</p>
-</main>
-
-<style style lang="postcss">
-	main {
-		@apply text-center;
-		@apply p-4;
-		@apply mx-auto;
-	}
-
-	h1 {
-		@apply text-blue-600;
-		@apply uppercase;
-		@apply text-6xl;
-		@apply font-thin;
-		@apply leading-tight;
-		@apply my-16 mx-auto;
-		@apply max-w-xs;
-		@apply hover:text-red-500;
-	}
-
-	p {
-		@apply max-w-xs;
-		@apply my-8 mx-auto;
-		@apply leading-snug;
-	}
-
-	@screen sm {
-		h1 {
-			@apply max-w-none;
-		}
-
-		p {
-			@apply max-w-none;
-		}
-	}
-</style>
+<Box cls={ss}>
+	<Content>
+		<HeadingUnderline id="what">
+			Why The Fuck <HeadingExtra content="(About)" />
+		</HeadingUnderline>
+		<Why />
+	</Content>
+	<Box cls={ssAlt}>
+		<Content>
+			<HeadingUnderline id="what">
+				What The Fuck <HeadingExtra content="(Projects)" />
+			</HeadingUnderline>
+			<Projects />
+		</Content>
+	</Box>
+	<Content>
+		<HeadingUnderline id="who">
+			Who the fuck <HeadingExtra content="(Team)" />
+		</HeadingUnderline>
+		<Team />
+	</Content>
+</Box>
