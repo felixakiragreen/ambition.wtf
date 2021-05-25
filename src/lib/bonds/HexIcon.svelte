@@ -5,21 +5,58 @@
 
 	export let url
 	export let hex
-	// export let color
+	export let color
 	export let path
 	export let transform
 
-	export let background
-	export let foreground
+	export let look
 
 	const ss = stitch({
-		'--hex-bg': 'var(--base-hex-bg)',
-		'--fill': 'var(--base-fill)',
-		'--hover': 'false',
-		'&:hover': {
-			'--hex-bg': 'var(--hover-hex-bg)',
-			'--fill': 'var(--hover-fill)',
-			'--hover': 'true',
+		variants: {
+			look: {
+				icon: {
+					'--hex-bg': 'var(--colors-clear)',
+					'--fill': 'var(--colors-felixgreen)',
+					'&:hover': {
+						'--hex-bg': 'var(--colors-felixgreen)',
+						'--fill': 'var(--colors-indigo)',
+					},
+				},
+				brand: {
+					'--hex-bg': 'var(--var-hex)',
+					'--fill': 'var(--colors-background)',
+					'&:hover': {
+						'--hex-bg': 'var(--colors-felixgreen)',
+						'--fill': 'var(--colors-indigo)',
+					},
+				},
+				color: {
+					'--hex-bg': 'var(--var-clr)',
+					'--fill': 'var(--colors-foreground)',
+					'&:hover': {
+						'--hex-bg': 'var(--colors-felixgreen)',
+						'--fill': 'var(--colors-indigo)',
+					},
+				},
+				felix: {
+					'--hex-bg': 'var(--colors-indigo)',
+					'--fill': 'var(--colors-felixgreen)',
+					'&:hover': {
+						'--hex-bg': 'var(--colors-felixgreen)',
+						'--fill': 'var(--colors-indigo)',
+					},
+				},
+			},
+			fill: {
+				felix: {
+					'--hex-bg': 'var(--colors-felixgreen)',
+					'--fill': 'var(--colors-indigo)',
+				},
+				indigo: {
+					'--hex-bg': 'var(--colors-indigo)',
+					'--fill': 'var(--colors-felixgreen)',
+				},
+			},
 		},
 		color: 'var(--hex-bg)',
 		transition: '$1',
@@ -30,13 +67,12 @@
 	{url}
 	newTab
 	cls={ss}
+	vrt={{ look }}
 	style="
-		--base-hex-bg: {background || hex};
-		--base-fill: {foreground || 'var(--colors-grey900)'};
-		--hover-hex-bg: var(--colors-felixgreen);
-		--hover-fill: var(--colors-indigo);
+		--var-hex: {hex};
+		--var-clr: var(--colors-{color}400);
 	">
-	<Hexagon fill="currentcolor">
+	<Hexagon fill="currentcolor" rounded>
 		<g
 			transform={`translate(${transform.translate.x},${transform.translate.y}) scale(${transform.scale})`}>
 			<path d={path} id="foreground" fill="var(--fill)" />
