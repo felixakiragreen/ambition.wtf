@@ -1,3 +1,5 @@
+import { map, mapValues } from 'lodash'
+
 import icon_twitter from './icons/twitter'
 import icon_discord from './icons/discord_new'
 import icon_rarible from './icons/rarible'
@@ -51,12 +53,9 @@ export const discord: SocialLink = {
 }
 
 export const email: SocialLink = {
+	service: 'email',
 	...socialLinks.email,
 	...icon_email,
-	//
-	background: '#5400fc',
-	foreground: '#adff2f',
-	//
 	transform: {
 		...transform.transform,
 		translate: {
@@ -91,9 +90,14 @@ interface SocialPersonals {
 	[key: string]: SocialLink[]
 }
 
-// export const personals: SocialPersonals = {
-
-// }
-
-// ...icon_twitter,
-// 	...transform,
+export const personals: SocialPersonals = {
+	...mapValues(socialLinks.personals, (socials) => {
+		return map(socials, (value) => {
+			return {
+				...value,
+				...icon_twitter,
+				...transform,
+			}
+		})
+	}),
+}
