@@ -20,7 +20,7 @@ const config = {
 		vite: {
 			ssr: {
 				// TODO: this needs to be in prod, but not dev
-				// noExternal: dev ? [] : ['lodash'],
+				noExternal: ['lodash'],
 			},
 			resolve: {
 				// alias: [{ find: '@', replacement: '/src' }],
