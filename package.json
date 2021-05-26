@@ -13,7 +13,7 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@stitches/core": "^0.1.9",
-		"@sveltejs/adapter-netlify": "next",
+		"@sveltejs/adapter-netlify": "1.0.0-next.12",
 		"@sveltejs/adapter-node": "next",
 		"@sveltejs/kit": "next",
 		"mdsvex": "^0.9.0",
