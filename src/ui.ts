@@ -1,3 +1,3 @@
-import { styled, css } from '../stitches.config'
+import { css, keyframes, getCssString, globalCss } from '../stitches.config'
 
-export { styled, css }
+export { css as stitch, keyframes, getCssString, globalCss }
