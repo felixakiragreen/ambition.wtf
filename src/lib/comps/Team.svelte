@@ -52,28 +52,25 @@
 
 <Box cls={ss}>
 	<Box cls={ssBox}>
-		<Image url={avatar_fag} alt="avatar for F.A.G." />
-
+		<Image url={avatar_fag} alt="avatar for felix green" />
 		<Text mdx="h3" css={{ fontFamily: '$main' }}>
 			felix <Text css={{ color: '$felixgreen' }}>green</Text>
 		</Text>
-		<Text css={{ display: 'block', text: '$xs' }}>the hacker</Text>
+		<Text>the hacker</Text>
 		<HexIconRow socials={personals.fag} look={'icon'} />
 	</Box>
 
 	<Box cls={ssBox}>
 		<Image url={avatar_tlm} alt="avatar for macbeth" />
-
 		<Text mdx="h3" css={{ fontFamily: '$main' }}>macbeth</Text>
-		<Text css={{ display: 'block', text: '$xs' }}>the art forger</Text>
+		<Text>the art forger</Text>
 		<HexIconRow socials={personals.tlm} look={'icon'} />
 	</Box>
 
 	<Box cls={ssBox}>
-		<Image url={avatar_mlm} alt="avatar for mlem" />
-
+		<Image url={avatar_mlm} alt="avatar for mcnames" />
 		<Text mdx="h3" css={{ fontFamily: '$main' }}>mcnames</Text>
-		<Text css={{ display: 'block', text: '$xs' }}>the cat burglar</Text>
+		<Text>the cat herder</Text>
 		<HexIconRow socials={personals.mlm} look={'icon'} />
 	</Box>
 </Box>
