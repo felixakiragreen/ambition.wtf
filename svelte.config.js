@@ -18,22 +18,11 @@ const config = {
 		adapter: netlify(),
 		//
 		vite: {
-			ssr: {
-				// TODO: this needs to be in prod, but not dev
-				noExternal: ['lodash'],
-			},
 			resolve: {
 				// alias: [{ find: '@', replacement: '/src' }],
 				alias: {
 					'@': '/src',
 				},
-			},
-			// build: {
-			// 	outDir: 'build/',
-			// },
-			optimizeDeps: {
-				include: ['lodash'],
-				exclude: [],
 			},
 		},
 	},
