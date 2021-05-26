@@ -9,7 +9,7 @@
 	import artsee from '../../assets/hero_artsee.jpg'
 </script>
 
-<Stack space="xl">
+<Stack space="xl" css={{ pb: '$12' }}>
 	<Link url={'http://hexis.wtf'} newTab look="clean">
 		<Image url={hexis} css={{ width: '100%' }} />
 	</Link>
