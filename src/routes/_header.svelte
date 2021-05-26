@@ -64,8 +64,7 @@
 							text: '$4xl',
 						},
 					}}>
-					<Text>ambition</Text>
-					<Text css={{ color: '$grey500' }}>.wtf</Text>
+					<Text>ambition</Text><Text css={{ color: '$grey500' }}>.wtf</Text>
 				</Text>
 			</Inline>
 			<Inline space="md">
