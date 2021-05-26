@@ -17,6 +17,6 @@ body {
 	font-family: 'SF Mono';
 	font-weight: 400;
 	font-style: normal;
-	src: url('src/assets/SFMono-Regular.otf');
+	src: url('../../assets/SFMono-Regular.otf');
 	font-display: swap;
 }
