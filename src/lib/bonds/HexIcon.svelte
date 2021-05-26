@@ -40,7 +40,7 @@
 				},
 				felix: {
 					'--hex-bg': 'var(--colors-indigo)',
-					'--fill': 'var(--colors-felixgreen)',
+					'--fill': 'var(--colors-background)',
 					'&:hover': {
 						'--hex-bg': 'var(--colors-felixgreen)',
 						'--fill': 'var(--colors-indigo)',
