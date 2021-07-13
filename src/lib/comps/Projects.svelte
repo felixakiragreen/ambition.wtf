@@ -4,13 +4,19 @@
 	import Text from '../bonds/Text.svelte'
 	import Stack from '../bonds/Stack.svelte'
 
-	import hexis from '../../assets/hero_hexis.jpg'
-	import junks from '../../assets/hero_junks.jpg'
-	import artsee from '../../assets/hero_artsee.jpg'
+	import fuckyous from '../../assets/hero_fuckyous.png'
 	import edworm from '../../assets/hero_edworm.gif'
+	import artsee from '../../assets/hero_artsee.jpg'
+	import junks from '../../assets/hero_cryptojunks.png'
+	import hexis from '../../assets/hero_hexis.jpg'
 </script>
 
 <Stack space="xl" css={{ pb: '$12' }}>
+	<Link url={'https://fuckyous.wtf'} newTab look="clean">
+		<Image url={fuckyous} css={{ width: '100%' }} />
+	</Link>
+	<Text>Fuck Yous — an NFT collection</Text>
+
 	<Link url={'https://theworm.wtf'} newTab look="clean">
 		<Image url={edworm} css={{ width: '100%' }} />
 	</Link>
