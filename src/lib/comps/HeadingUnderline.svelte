@@ -21,15 +21,7 @@
 			'@md': {
 				pb: '$4',
 			},
-
-			'&:before': {
-				content: ' ',
-				display: 'block',
-				height: '$40' /* fixed header height*/,
-				marginTop: '$-40' /* negative fixed header height */,
-				visibility: 'hidden',
-				zIndex: '-9999',
-			},
+			scrollMarginTop: '$40',
 		}}>
 		<slot />
 	</Text>
