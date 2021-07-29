@@ -15,12 +15,12 @@
 	<Link url={'https://fuckyous.wtf'} newTab look="clean">
 		<Image url={fuckyous} css={{ width: '100%' }} />
 	</Link>
-	<Text>Fuck Yous — an NFT collection</Text>
+	<Text>Fuck Yous — a 100% on-chain NFT collection</Text>
 
 	<Link url={'https://theworm.wtf'} newTab look="clean">
 		<Image url={edworm} css={{ width: '100%' }} />
 	</Link>
-	<Text>The Worm — an NFT worm making his way through the blockchain</Text>
+	<Text>The Worm — a 100% on-chain Social NFT</Text>
 
 	<Link url={'https://artsee.wtf'} newTab look="clean">
 		<Image url={artsee} css={{ width: '100%' }} />
@@ -30,10 +30,10 @@
 	<Link url={'https://cryptojunks.wtf'} newTab look="clean">
 		<Image url={junks} css={{ width: '100%' }} />
 	</Link>
-	<Text>CryptoJunks — an NFT collection</Text>
+	<Text>CryptoJunks — an NFT collection (off-chain, IPFS)</Text>
 
 	<Link url={'https://hexis.wtf'} newTab look="clean">
 		<Image url={hexis} css={{ width: '100%' }} />
 	</Link>
-	<Text>hexis — an NFT collection</Text>
+	<Text>hexis — an NFT collection (off-chain, IPFS)</Text>
 </Stack>
