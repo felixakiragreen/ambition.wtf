@@ -56,7 +56,7 @@
 		<Text mdx="h3" css={{ fontFamily: '$main' }}>
 			felix <Text css={{ color: '$felixgreen' }}>green</Text>
 		</Text>
-		<Text>the hacker</Text>
+		<Text>the builder</Text>
 		<HexIconRow socials={personals.fag} look={'icon'} />
 	</Box>
 
