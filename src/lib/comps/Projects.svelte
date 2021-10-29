@@ -21,7 +21,7 @@
 		<Image url={fuckyous} css={{ width: '100%' }} />
 	</Link>
 	<Text size="xl" css={{ textAlign: 'center', fontWeight: '$bold' }}
-		><Text css={{ color: '$orange400' }}>FUCK YOUS</Text> ⬡ mutable on-chain NFTs</Text>
+		><Text css={{ color: '$orange300' }}>FUCK YOUS</Text> ⬡ mutable on-chain NFTs</Text>
 	<Text
 		>A 100% on-chain NFT collection that uses on-chain mutation mechanics.
 		Design and re-design the FUCK YOUs on-chain at any time. Score limited
@@ -51,7 +51,7 @@
 		<Image url={artsee} css={{ width: '100%', mt: '$24' }} />
 	</Link>
 	<Text size="xl" css={{ textAlign: 'center', fontWeight: '$bold' }}
-		><Text css={{ color: '$yellow400' }}>artsee</Text> ⬡ browser extension for NFTs</Text>
+		><Text css={{ color: '$yellow300' }}>artsee</Text> ⬡ browser extension for NFTs</Text>
 	<Text
 		>A browser extension for admiring your NFTs every time you open a new tab.
 		Make your Web 2 experience a little more Web 3. Available for Brave & Chrome
@@ -63,7 +63,7 @@
 		<Image url={junks} css={{ width: '100%', mt: '$24' }} />
 	</Link>
 	<Text size="xl" css={{ textAlign: 'center', fontWeight: '$bold' }}
-		><Text css={{ color: '$purple400' }}>CryptoJunks</Text> ⬡ off-chain IPFS NFTs</Text>
+		><Text css={{ color: '$purple300' }}>CryptoJunks</Text> ⬡ off-chain IPFS NFTs</Text>
 	<Text
 		>An NSFW NFT collection of pixel art Junks made from more than 1,200
 		attributes. The CryptoPunks set the standard for NFT pixel art … the
