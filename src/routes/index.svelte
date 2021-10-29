@@ -6,10 +6,9 @@
 
 	import HeadingExtra from '$lib/comps/HeadingExtra.svelte'
 	import HeadingUnderline from '$lib/comps/HeadingUnderline.svelte'
+	import About from '$lib/comps/About.svelte'
 	import Projects from '$lib/comps/Projects.svelte'
 	import Team from '$lib/comps/Team.svelte'
-
-	import Why from './_landing/Why.md'
 
 	const ss = stitch({
 		bg: '$background',
@@ -31,7 +30,7 @@
 		<HeadingUnderline id="why">
 			Why The Fuck <HeadingExtra content="(About)" />
 		</HeadingUnderline>
-		<Why />
+		<About />
 	</Content>
 	<Box cls={ssAlt}>
 		<Content>
