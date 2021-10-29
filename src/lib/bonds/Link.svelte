@@ -19,7 +19,7 @@
 					// fontWeight: '$bold',
 					color: '$foreground',
 					textDecoration: 'none',
-					borderBottom: '2px solid $highlight',
+					borderBottom: '2px solid currentcolor',
 					display: 'inline-block',
 					py: '$2',
 					transition: '$1',
@@ -46,10 +46,11 @@
 				blockinho: {
 					// color: '$highlight',
 					// textDecoration: 'underline',
-					color: '$foreground',
+					// color: '$foreground',
+					color: '$highlight',
 					textDecoration: 'none',
 					display: 'inline-block',
-					borderBottom: '1px solid $foreground',
+					borderBottom: '1px solid currentcolor',
 					// transition: '$1',
 
 					'& span': {
@@ -61,7 +62,8 @@
 					},
 
 					'&:hover': {
-						// color: '$background',
+						// color: '$foreground',
+						color: '$background',
 						cursor: 'pointer',
 						borderBottom: '1px solid transparent',
 
