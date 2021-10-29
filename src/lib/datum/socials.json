@@ -18,12 +18,12 @@
 	"personals": {
 		"fag": [
 			{
-				"url": "https://twitter.com/felixakiragreen",
-				"username": "@felixakiragreen"
-			},
-			{
 				"url": "https://twitter.com/thecolorfelix",
 				"username": "@thecolorfelix"
+			},
+			{
+				"url": "https://twitter.com/felixakiragreen",
+				"username": "@felixakiragreen"
 			}
 		],
 		"tlm": [
