@@ -1,4 +1,5 @@
 <script>
+	import Box from '../atoms/Box.svelte'
 	import Image from '../atoms/Image.svelte'
 	import Link from '../bonds/Link.svelte'
 	import Text from '../bonds/Text.svelte'
@@ -17,10 +18,12 @@
 		pb: '$24',
 		lineHeight: '$lg',
 	}}>
+	<Box css={{ height: '$8' }} />
+
 	<Link url={'https://fuckyous.wtf'} newTab look="clean">
 		<Image url={fuckyous} css={{ width: '100%' }} />
 	</Link>
-	<Text size="xl" css={{ textAlign: 'center', fontWeight: '$bold' }}
+	<Text size="xl" css={{ fontWeight: '$bold' }}
 		><Text css={{ color: '$orange300' }}>FUCK YOUS</Text> ⬡ mutable on-chain NFTs</Text>
 	<Text
 		>A 100% on-chain NFT collection that uses on-chain mutation mechanics.
@@ -32,10 +35,12 @@
 			look="blockinho">fuckyous.wtf</Link
 		>.</Text>
 
+	<Box css={{ height: '$16' }} />
+
 	<Link url={'https://theworm.wtf'} newTab look="clean">
-		<Image url={edworm} css={{ width: '100%', mt: '$24' }} />
+		<Image url={edworm} css={{ width: '100%' }} />
 	</Link>
-	<Text size="xl" css={{ textAlign: 'center', fontWeight: '$bold' }}
+	<Text size="xl" css={{ fontWeight: '$bold' }}
 		><Text css={{ color: '#ec008c' }}>The Worm</Text> ⬡ social on-chain NFTs</Text>
 	<Text
 		>A 100% on-chain social NFT that uses share-to-mint. Get The Worm, pass it
@@ -47,10 +52,12 @@
 			look="blockinho">theworm.wtf</Link
 		>.</Text>
 
+	<Box css={{ height: '$16' }} />
+
 	<Link url={'https://artsee.wtf'} newTab look="clean">
-		<Image url={artsee} css={{ width: '100%', mt: '$24' }} />
+		<Image url={artsee} css={{ width: '100%' }} />
 	</Link>
-	<Text size="xl" css={{ textAlign: 'center', fontWeight: '$bold' }}
+	<Text size="xl" css={{ fontWeight: '$bold' }}
 		><Text css={{ color: '$yellow300' }}>artsee</Text> ⬡ browser extension for NFTs</Text>
 	<Text
 		>A browser extension for admiring your NFTs every time you open a new tab.
@@ -59,10 +66,12 @@
 		<Link url={'https://artsee.wtf'} newTab look="blockinho">artsee.wtf</Link
 		>.</Text>
 
+	<Box css={{ height: '$16' }} />
+
 	<Link url={'https://cryptojunks.wtf'} newTab look="clean">
-		<Image url={junks} css={{ width: '100%', mt: '$24' }} />
+		<Image url={junks} css={{ width: '100%' }} />
 	</Link>
-	<Text size="xl" css={{ textAlign: 'center', fontWeight: '$bold' }}
+	<Text size="xl" css={{ fontWeight: '$bold' }}
 		><Text css={{ color: '$purple300' }}>CryptoJunks</Text> ⬡ off-chain IPFS NFTs</Text>
 	<Text
 		>An NSFW NFT collection of pixel art Junks made from more than 1,200
@@ -74,11 +83,13 @@
 			look="blockinho">cryptojunks.wtf</Link
 		>.</Text>
 
+	<Box css={{ height: '$16' }} />
+
 	<Link url={'https://hexis.wtf'} newTab look="clean">
-		<Image url={hexis} css={{ width: '100%', mt: '$24' }} />
+		<Image url={hexis} css={{ width: '100%' }} />
 	</Link>
-	<Text size="xl" css={{ textAlign: 'center', fontWeight: '$bold' }}
-		>hexis ⬡ off-chain IPFS NFTs</Text>
+	<Text size="xl" css={{ fontWeight: '$bold' }}
+		><Text css={{ color: '$grey400' }}>hexis</Text> ⬡ off-chain IPFS NFTs</Text>
 	<Text
 		>An animated NFT collection and experiment in shape and dimension. Hexis
 		combines the generative madness of an algorithm with the soft guidance of an
