@@ -67,7 +67,7 @@
 	<Text
 		>An NSFW NFT collection of pixel art Junks made from more than 1,200
 		attributes. The CryptoPunks set the standard for NFT pixel art … the
-		Cryptojunks aim a little lower.<br /><br />
+		CryptoJunks aim a little lower.<br /><br />
 		Grab some Junk at <Link
 			url={'https://cryptojunks.wtf'}
 			newTab
