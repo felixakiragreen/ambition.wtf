@@ -17,7 +17,7 @@
 				blocky: {
 					// text: '$lg',
 					// fontWeight: '$bold',
-					color: '$foreground',
+					color: '$highlight',
 					textDecoration: 'none',
 					borderBottom: '2px solid currentcolor',
 					display: 'inline-block',
