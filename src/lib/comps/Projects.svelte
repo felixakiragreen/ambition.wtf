@@ -41,11 +41,12 @@
 		<Image url={edworm} css={{ width: '100%' }} />
 	</Link>
 	<Text size="xl" css={{ fontWeight: '$bold' }}
-		><Text css={{ color: '#ec008c' }}>The Worm</Text> ⬡ social on-chain NFTs</Text>
+		><Text css={{ color: '#ec008c' }}>The Worm</Text> ⬡ social soul-bound on-chain
+		NFTs</Text>
 	<Text
 		>A 100% on-chain social NFT that uses share-to-mint. Get The Worm, pass it
-		along, and it will mint you a permanent memento of your special time
-		together.<br /><br />
+		along, and it will mint you a permanent memento (soul-bound) of your special
+		time together.<br /><br />
 		Track The Worm and learn more at <Link
 			url={'https://theworm.wtf'}
 			newTab
@@ -94,9 +95,7 @@
 		>An animated NFT collection and experiment in shape and dimension. Hexis
 		combines the generative madness of an algorithm with the soft guidance of an
 		artist’s hand.<br /><br />
-		New episode every Friday at 09:00 et at <Link
-			url={'https://hexis.wtf'}
-			newTab
-			look="blockinho">hexis.wtf</Link
+		View them all at <Link url={'https://hexis.wtf'} newTab look="blockinho"
+			>hexis.wtf</Link
 		>.</Text>
 </Stack>
