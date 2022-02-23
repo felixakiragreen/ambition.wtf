@@ -20,19 +20,19 @@
 	}}>
 	<Box css={{ height: '$8' }} />
 
-	<Link url={'https://fuckyous.wtf'} newTab look="clean">
+	<Link url={'https://lilfks.wtf'} newTab look="clean">
 		<Image url={fuckyous} css={{ width: '100%' }} />
 	</Link>
 	<Text size="xl" css={{ fontWeight: '$bold' }}
-		><Text css={{ color: '$orange300' }}>FUCK YOUS</Text> ⬡ mutable on-chain NFTs</Text>
+		><Text css={{ color: '$orange300' }}>lil fks</Text> ⬡ mutable on-chain NFTs</Text>
 	<Text
 		>A 100% on-chain NFT collection that uses on-chain mutation mechanics.
-		Design and re-design the FUCK YOUs on-chain at any time. Score limited
-		edition traits during special mutation events.<br /><br />
-		Get and mutate one of 10,000 FUCK YOUs at <Link
-			url={'https://fuckyous.wtf'}
+		Design and re-design the lil fks on-chain at any time. Score limited edition
+		traits during special mutation events.<br /><br />
+		Get and mutate one of 10,000 lil fks at <Link
+			url={'https://lilfks.wtf'}
 			newTab
-			look="blockinho">fuckyous.wtf</Link
+			look="blockinho">lilfks.wtf</Link
 		>.</Text>
 
 	<Box css={{ height: '$16' }} />
