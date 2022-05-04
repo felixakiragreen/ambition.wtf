@@ -25,8 +25,8 @@
 
 <Inline css={cssInl} {space} {align}>
 	{#each socials as social}
-		{#if social?.service === 'email'}
-			<HexIcon {...social} look="felix" />
+		{#if social?.look}
+			<HexIcon {...social} look={social.look} />
 		{:else}
 			<HexIcon {...social} {look} />
 		{/if}
