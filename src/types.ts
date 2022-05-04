@@ -1,6 +1,5 @@
 export type SocialLink = {
 	url: string
-	service?: string
 	username: string
 	title: string
 	hex: string
@@ -13,4 +12,5 @@ export type SocialLink = {
 		}
 	}
 	color?: string
+	look?: string
 }
