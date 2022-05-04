@@ -3,6 +3,7 @@ import icon_discord from './icons/discord_new'
 import icon_rarible from './icons/rarible'
 import icon_opensea from './icons/opensea'
 import icon_email from './icons/email'
+import icon_medium from './icons/medium'
 
 import type { SocialLink } from '@/types'
 import socialLinks from './socials.json'
@@ -51,7 +52,7 @@ export const discord: SocialLink = {
 }
 
 export const email: SocialLink = {
-	service: 'email',
+	look: 'felix',
 	...socialLinks.email,
 	...icon_email,
 	transform: {
@@ -75,12 +76,20 @@ export const rarible: SocialLink = {
 	},
 }
 
+export const medium: SocialLink = {
+	...socialLinks.medium,
+	...icon_medium,
+	...transform,
+	look: 'felix',
+}
+
 export const socials: SocialLink[] = [
 	//
 	email,
 	twitter,
 	discord,
 	rarible,
+	medium,
 	// opensea,
 ]
 
