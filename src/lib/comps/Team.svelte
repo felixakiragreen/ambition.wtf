@@ -61,16 +61,17 @@
 	</Box>
 
 	<Box cls={ssBox}>
-		<Image url={avatar_tlm} alt="avatar for macbeth" />
-		<Text mdx="h3" css={{ fontFamily: '$main' }}>macbeth</Text>
-		<Text>the art forger</Text>
-		<HexIconRow socials={personals.tlm} look={'icon'} />
-	</Box>
-
-	<Box cls={ssBox}>
 		<Image url={avatar_mlm} alt="avatar for mcnames" />
 		<Text mdx="h3" css={{ fontFamily: '$main' }}>mcnames</Text>
 		<Text>the cat herder</Text>
 		<HexIconRow socials={personals.mlm} look={'icon'} />
 	</Box>
+
+	<Box cls={ssBox}>
+		<Image url={avatar_tlm} alt="avatar for macbeth" />
+		<Text mdx="h3" css={{ fontFamily: '$main' }}>macbeth</Text>
+		<Text>the art forger</Text>
+		<HexIconRow socials={personals.tlm} look={'icon'} />
+	</Box>
+	
 </Box>
