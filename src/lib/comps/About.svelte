@@ -17,9 +17,11 @@
 				>Technomancy</Text
 			>, the art of creating magical technological experiences.
 		</Text>
-		<br /><br /> Driven by experimentation, innovation, and breaking things,
+		<!-- <br /><br /> Driven by experimentation, innovation, and breaking things,
 		we’re the pioneers of share-to-mint, on-chain mutation, soul-bound
-		(perma-nifties) and yoink-chain Smart Contract mechanics.
+		(perma-nifties) and yoink-chain Smart Contract mechanics. -->
+		<br /><br /> Driven by experimentation, innovation, and breaking things,
+		we're constantly exploring new mediums of technology and experimental mechanics.
 		<br /><br />Our work is open-source and copyright free.
 		<br /><br />Explore our projects below and join the conversation on
 		<Link url={'https://discord.gg/6j65H7nqSd'} newTab look="blockinho"
