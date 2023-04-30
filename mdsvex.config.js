@@ -1,4 +1,14 @@
-import { createRequire } from "module";
-const require = createRequire(import.meta.url)
+import { defineMDSveXConfig as defineConfig } from 'mdsvex'
 
-export const mdsvexConfig = require("./mdsvex.config.cjs");
+const config = defineConfig({
+	extensions: ['.svelte.md', '.md', '.svx'],
+
+	smartypants: {
+		dashes: 'oldschool',
+	},
+
+	remarkPlugins: [],
+	rehypePlugins: [],
+})
+
+export default config
