@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
 	import { stitch } from '@/ui'
+	import type { CSS } from '@/ui'
 
-	export let cls = null
-	export let css = null
-	export let style = null
 	export let id = null
+	export let cls = null
+	export let css: CSS = null
+	export let style = null
 	export let vrt = {}
 
 	const ss = cls || stitch({})
