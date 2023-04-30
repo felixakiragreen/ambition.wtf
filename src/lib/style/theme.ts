@@ -1,3 +1,5 @@
+import type * as Stitches from '@stitches/core'
+
 const colors = {
 	felixgreen: '#adff2f',
 	indigo: '#5400fc',
@@ -335,10 +337,8 @@ export const tokens = {
 		sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
 		base: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
 		md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-		lg:
-			'0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-		xl:
-			'0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+		lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+		xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
 		'2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
 		'3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
 		inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
@@ -353,113 +353,113 @@ export const tokens = {
 }
 
 export const utils = {
-	m: (config) => (value) => ({
+	m: (value: Stitches.ScaleValue<'space'>) => ({
 		marginTop: value,
 		marginBottom: value,
 		marginLeft: value,
 		marginRight: value,
 	}),
-	mt: (config) => (value) => ({
+	mt: (value: Stitches.ScaleValue<'space'>) => ({
 		marginTop: value,
 	}),
-	mr: (config) => (value) => ({
+	mr: (value: Stitches.ScaleValue<'space'>) => ({
 		marginRight: value,
 	}),
-	mb: (config) => (value) => ({
+	mb: (value: Stitches.ScaleValue<'space'>) => ({
 		marginBottom: value,
 	}),
-	ml: (config) => (value) => ({
+	ml: (value: Stitches.ScaleValue<'space'>) => ({
 		marginLeft: value,
 	}),
-	mx: (config) => (value) => ({
+	mx: (value: Stitches.ScaleValue<'space'>) => ({
 		marginLeft: value,
 		marginRight: value,
 	}),
-	my: (config) => (value) => ({
+	my: (value: Stitches.ScaleValue<'space'>) => ({
 		marginTop: value,
 		marginBottom: value,
 	}),
-	p: (config) => (value) => ({
+	p: (value: Stitches.ScaleValue<'space'>) => ({
 		paddingTop: value,
 		paddingBottom: value,
 		paddingLeft: value,
 		paddingRight: value,
 	}),
-	pt: (config) => (value) => ({
+	pt: (value: Stitches.ScaleValue<'space'>) => ({
 		paddingTop: value,
 	}),
-	pr: (config) => (value) => ({
+	pr: (value: Stitches.ScaleValue<'space'>) => ({
 		paddingRight: value,
 	}),
-	pb: (config) => (value) => ({
+	pb: (value: Stitches.ScaleValue<'space'>) => ({
 		paddingBottom: value,
 	}),
-	pl: (config) => (value) => ({
+	pl: (value: Stitches.ScaleValue<'space'>) => ({
 		paddingLeft: value,
 	}),
-	px: (config) => (value) => ({
+	px: (value: Stitches.ScaleValue<'space'>) => ({
 		paddingLeft: value,
 		paddingRight: value,
 	}),
-	py: (config) => (value) => ({
+	py: (value: Stitches.ScaleValue<'space'>) => ({
 		paddingTop: value,
 		paddingBottom: value,
 	}),
-	text: (config) => (value) => ({
+	text: (value) => ({
 		fontSize: value,
 		lineHeight: value,
 	}),
-	w: (config) => (value) => ({
+	w: (value: Stitches.ScaleValue<'sizes'>) => ({
 		width: value,
 	}),
-	h: (config) => (value) => ({
+	h: (value: Stitches.ScaleValue<'sizes'>) => ({
 		height: value,
 	}),
-	size: (config) => (value) => ({
+	size: (value: Stitches.ScaleValue<'sizes'>) => ({
 		w: value,
 		h: value,
 	}),
-	surrounding: (config) => (value) => ({
+	surrounding: (value: Stitches.ScaleValue<'space'>) => ({
 		top: value,
 		right: value,
 		bottom: value,
 		left: value,
 	}),
-	s: (config) => (value) => ({
+	s: (value: Stitches.ScaleValue<'space'>) => ({
 		// Unfortunately gap doesn't work on mobile Safari
 		gap: value,
 		// '& > * + *': {
 		// 	ml: value,
 		// },
 	}),
-	sx: (config) => (value) => ({
+	sx: (value: Stitches.ScaleValue<'space'>) => ({
 		// Unfortunately gap doesn't work on mobile Safari
 		columnGap: value,
 		// '& > * + *': {
 		// 	ml: value,
 		// },
 	}),
-	sy: (config) => (value) => ({
+	sy: (value: Stitches.ScaleValue<'space'>) => ({
 		// Unfortunately gap doesn't work on mobile Safari
 		rowGap: value,
 		// '& > * + *': {
 		// 	mt: value,
 		// },
 	}),
-	backdropFilter: (config) => (value) => ({
+	backdropFilter: (value) => ({
 		backdropFilter: value,
 		'-webkit-backdrop-filter': value,
 	}),
-	linearGradient: (config) => (value) => ({
+	linearGradient: (value) => ({
 		backgroundImage: `linear-gradient(${value})`,
 	}),
-	blur: (config) => (value) => ({
+	blur: (value) => ({
 		filter: `blur(${value})`,
 	}),
-	bg: (config) => (value) => ({
+	bg: (value: Stitches.PropertyValue<'color'>) => ({
 		backgroundColor: value,
 	}),
-	clip: (config) => (value) => {
+	clip: (value) => {
 		const values = {
 			hexagon:
 				'polygon(50% 0, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%)',
@@ -469,6 +469,21 @@ export const utils = {
 			clipPath: values[value] || value,
 		}
 	},
+	b: (value: Stitches.PropertyValue<'color'>) => {
+		// TODO: rework
+		// const [value1, value2] = value.split('-')
+		// `${}-${
+		// type BorderValue = Stitches.PropertyValue<'color'>
+
+		return {
+			border: `1px solid ${value}`,
+		}
+	},
+	truncate: () => ({
+		overflow: 'hidden',
+		whiteSpace: 'nowrap',
+		textOverflow: 'ellipsis',
+	}),
 }
 
 // --tw-space-y-reverse: 0;
