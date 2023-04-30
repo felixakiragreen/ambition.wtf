@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { stitch } from '@/ui'
-	import Box from '../atoms/Box.svelte'
+	import type { CSS } from '@/ui'
 
-	export let css = null
+	import { Box } from '@/lib/atoms'
+
+	export let css: CSS = null
 	export let below = null
 	export let above = null
 	export let inline = true
@@ -21,25 +23,19 @@
 			},
 			below: {
 				sm: {
-					'@initial': {
-						display: 'none',
-					},
+					display: 'none',
 					'@sm': {
 						display: 'initial',
 					},
 				},
 				md: {
-					'@initial': {
-						display: 'none',
-					},
+					display: 'none',
 					'@md': {
 						display: 'initial',
 					},
 				},
 				lg: {
-					'@initial': {
-						display: 'none',
-					},
+					display: 'none',
 					'@lg': {
 						display: 'initial',
 					},
@@ -47,25 +43,19 @@
 			},
 			above: {
 				sm: {
-					'@initial': {
-						display: 'initial',
-					},
+					display: 'initial',
 					'@sm': {
 						display: 'none',
 					},
 				},
 				md: {
-					'@initial': {
-						display: 'initial',
-					},
+					display: 'initial',
 					'@md': {
 						display: 'none',
 					},
 				},
 				lg: {
-					'@initial': {
-						display: 'initial',
-					},
+					display: 'initial',
 					'@lg': {
 						display: 'none',
 					},
