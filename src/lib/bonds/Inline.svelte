@@ -1,81 +1,159 @@
-<script>
+<script lang="ts">
 	import { stitch } from '@/ui'
-	import Box from '../atoms/Box.svelte'
+	import type { CSS } from '@/ui'
 
-	export let css = null
-	export let space = null
-	export let spaceV = null
-	export let align = null
-	export let alignV = null
-	export let collapseBelow = null
+	import { Box } from '@/lib/atoms'
+
+	export let id: string | null = null
+	export let css: CSS = {}
+	export let pad: string | null = null
+	export let gap: string | null = null
+	export let gapV: string | null = null
+	export let align: string | null = null
+	export let alignV: string | null = null
+	export let collapseBelow: string | null = null
+
+	// TODO: fix that when collapsed, alignV is actually alignH
+
+	// ADD hide=below sm, md, lg to these
 
 	const ss = stitch({
 		display: 'flex',
-		// flexDirection: 'row',
-		// flexWrap: 'wrap',
 
-		sx: '$$spacex',
-		sy: '$$spacey',
+		sx: '$$SpaceX',
+		sy: '$$SpaceY',
 
 		variants: {
-			space: {
+			pad: {
 				no: {
-					// sx: '$0',
-					$$spacex: '$space$0',
+					p: '$no',
+				},
+				xs: {
+					p: '$xs',
 				},
 				sm: {
-					// sx: '$2',
-					$$spacex: '$space$2',
+					p: '$sm',
 				},
 				md: {
-					// sx: '$4',
-					$$spacex: '$space$4',
+					p: '$md',
 				},
 				lg: {
-					// sx: '$6',
-					$$spacex: '$space$6',
+					p: '$lg',
 				},
 				xl: {
-					// sx: '$8',
-					$$spacex: '$space$8',
+					p: '$xl',
 				},
 				'2xl': {
-					// sx: '$10',
-					$$spacex: '$space$10',
+					p: '$2xl',
 				},
 				'3xl': {
-					// sx: '$12',
-					$$spacex: '$space$12',
+					p: '$3xl',
+				},
+				'4xl': {
+					p: '$4xl',
+				},
+				'5xl': {
+					p: '$5xl',
+				},
+				'6xl': {
+					p: '$6xl',
+				},
+				'7xl': {
+					p: '$7xl',
+				},
+				'8xl': {
+					p: '$8xl',
+				},
+				'9xl': {
+					p: '$9xl',
 				},
 			},
-			spaceV: {
+			gap: {
 				no: {
-					// sy: '$0',
-					$$spacey: '$space$0',
+					$$SpaceX: '$space$no',
+				},
+				xs: {
+					$$SpaceX: '$space$xs',
 				},
 				sm: {
-					// sy: '$2',
-					$$spacey: '$space$2',
+					$$SpaceX: '$space$sm',
 				},
 				md: {
-					// sy: '$4',
-					$$spacey: '$space$4',
+					$$SpaceX: '$space$md',
 				},
 				lg: {
-					// sy: '$6',
-					$$spacey: '$space$6',
+					$$SpaceX: '$space$lg',
 				},
 				xl: {
-					// sy: '$8',
-					$$spacey: '$space$8',
+					$$SpaceX: '$space$xl',
 				},
 				'2xl': {
-					// sy: '$10',
-					$$spacey: '$space$10',
+					$$SpaceX: '$space$2xl',
 				},
 				'3xl': {
-					// sy: '$12',
-					$$spacey: '$space$12',
+					$$SpaceX: '$space$3xl',
+				},
+				'4xl': {
+					$$SpaceX: '$space$4xl',
+				},
+				'5xl': {
+					$$SpaceX: '$space$5xl',
+				},
+				'6xl': {
+					$$SpaceX: '$space$6xl',
+				},
+				'7xl': {
+					$$SpaceX: '$space$7xl',
+				},
+				'8xl': {
+					$$SpaceX: '$space$8xl',
+				},
+				'9xl': {
+					$$SpaceX: '$space$9xl',
+				},
+			},
+			gapV: {
+				no: {
+					$$SpaceY: '$space$no',
+				},
+				xs: {
+					$$SpaceY: '$space$xs',
+				},
+				sm: {
+					$$SpaceY: '$space$sm',
+				},
+				md: {
+					$$SpaceY: '$space$md',
+				},
+				lg: {
+					$$SpaceY: '$space$lg',
+				},
+				xl: {
+					$$SpaceY: '$space$xl',
+				},
+				'2xl': {
+					$$SpaceY: '$space$2xl',
+				},
+				'3xl': {
+					$$SpaceY: '$space$3xl',
+				},
+				'4xl': {
+					$$SpaceY: '$space$4xl',
+				},
+				'5xl': {
+					$$SpaceY: '$space$5xl',
+				},
+				'6xl': {
+					$$SpaceY: '$space$6xl',
+				},
+				'7xl': {
+					$$SpaceY: '$space$7xl',
+				},
+				'8xl': {
+					$$SpaceY: '$space$8xl',
+				},
+				'9xl': {
+					$$SpaceY: '$space$9xl',
 				},
 			},
 			align: {
@@ -88,13 +166,16 @@
 				center: {
 					justifyContent: 'center',
 				},
+				between: {
+					justifyContent: 'space-between',
+				},
 			},
 			alignV: {
 				top: {
-					alignItems: 'start',
+					alignItems: 'flex-start',
 				},
 				bottom: {
-					alignItems: 'end',
+					alignItems: 'flex-end',
 				},
 				center: {
 					alignItems: 'center',
@@ -105,31 +186,22 @@
 			},
 			collapseBelow: {
 				sm: {
-					'@initial': {
-						flexDirection: 'column',
-						// $$spacex: '$space$0',
-					},
+					flexDirection: 'column',
 					'@sm': {
 						flexDirection: 'row',
-						// $$spacex: '$space$0',
+						// $$SpaceX: '$space$0',
 						// sy: '$0',
 					},
 				},
 				md: {
-					'@initial': {
-						flexDirection: 'column',
-						sx: '$0',
-					},
+					flexDirection: 'column',
 					'@md': {
 						flexDirection: 'row',
 						// sy: '$0',
 					},
 				},
 				lg: {
-					'@initial': {
-						flexDirection: 'column',
-						// sx: '$0',
-					},
+					flexDirection: 'column',
 					'@lg': {
 						flexDirection: 'row',
 						// sy: '$0',
@@ -138,33 +210,29 @@
 			},
 		},
 
-		defaultVariants: {
-			space: 'no',
-			// align: 'leading',
-		},
+		// defaultVariants: {
+		// 	space: 'no',
+		// 	// align: 'leading',
+		// },
 
 		// TODO: Need to figure out a better way to do this
 		compoundVariants: [
-			{
-				collapseBelow: 'md',
-				align: 'center',
-				css: {
-					'@initial': {
-						alignItems: 'center',
-					},
-					'@md': {
-						justifyContent: 'center',
-					},
-				},
-			},
+			// {
+			// 	collapseBelow: 'md',
+			// 	align: 'center',
+			// 	css: {
+			// 			alignItems: 'center',
+			// 		'@md': {
+			// 			justifyContent: 'center',
+			// 		},
+			// 	},
+			// },
 			// {
 			// 	collapseBelow: 'md',
 			// 	space: 'xl',
 			// 	css: {
-			// 		'@initial': {
 			// 			sy: '$8',
 			// 			bg: '$red400',
-			// 		},
 			// 		'@lg': {
 			// 			sy: '$0',
 			// 			bg: '$orange400',
@@ -182,6 +250,6 @@
 	// if collapse below,
 </script>
 
-<Box cls={ss} vrt={{ space, spaceV, align, alignV, collapseBelow }} {css}>
+<Box cls={ss} vrt={{ pad, gap, gapV, align, alignV, collapseBelow }} {css} {id}>
 	<slot />
 </Box>
