@@ -70,7 +70,8 @@
 				</Inline>
 			</Link>
 			<Inline gap="md">
-				<HeaderLink url="#support">Support</HeaderLink>
+				<HeaderLink url="/wawegonado">WaWeGonaDo‽</HeaderLink>
+				<HeaderLink url="/wawegonado#support">Support</HeaderLink>
 				<HeaderLink url="/wawegonado/privacy">Privacy</HeaderLink>
 			</Inline>
 		</Inline>
