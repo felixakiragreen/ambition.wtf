@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
 	import { stitch } from '@/ui'
+	import type { CSS } from '@/ui'
 
-	export let css = null
+	export let css: CSS = {}
 
 	const ss = stitch({
 		// backgroundColor: "$background",
@@ -10,10 +11,8 @@
 		mx: 'auto',
 		maxWidth: '$screen-lg',
 		py: '$4',
+		px: '$4',
 
-		'@initial': {
-			px: '$4',
-		},
 		'@sm': {
 			px: '$8',
 		},
