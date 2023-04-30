@@ -1,9 +1,13 @@
-<script>
+<script lang="ts">
 	import { stitch } from '@/ui'
-	import Box from '../atoms/Box.svelte'
+	import type { CSS } from '@/ui'
 
-	export let css = null
-	export let space = null
+	import { Box } from '@/lib/atoms'
+
+	export let id = null
+	export let css: CSS = null
+	export let pad = null
+	export let gap = null
 	export let align = null
 	export let alignV = null
 
@@ -11,26 +15,95 @@
 		display: 'flex',
 		flexDirection: 'column',
 
+		sy: '$$SpaceY',
+
 		variants: {
-			space: {
-				no: {},
+			pad: {
+				no: {
+					p: '$no',
+				},
+				xs: {
+					p: '$xs',
+				},
 				sm: {
-					sy: '$2',
+					p: '$sm',
 				},
 				md: {
-					sy: '$4',
+					p: '$md',
 				},
 				lg: {
-					sy: '$6',
+					p: '$lg',
 				},
 				xl: {
-					sy: '$8',
+					p: '$xl',
 				},
 				'2xl': {
-					sy: '$10',
+					p: '$2xl',
 				},
 				'3xl': {
-					sy: '$12',
+					p: '$3xl',
+				},
+				'4xl': {
+					p: '$4xl',
+				},
+				'5xl': {
+					p: '$5xl',
+				},
+				'6xl': {
+					p: '$6xl',
+				},
+				'7xl': {
+					p: '$7xl',
+				},
+				'8xl': {
+					p: '$8xl',
+				},
+				'9xl': {
+					p: '$9xl',
+				},
+			},
+			gap: {
+				no: {
+					$$SpaceY: '$space$no',
+				},
+				xs: {
+					$$SpaceY: '$space$xs',
+				},
+				sm: {
+					$$SpaceY: '$space$sm',
+				},
+				md: {
+					$$SpaceY: '$space$md',
+				},
+				lg: {
+					$$SpaceY: '$space$lg',
+				},
+				xl: {
+					$$SpaceY: '$space$xl',
+				},
+				'2xl': {
+					$$SpaceY: '$space$2xl',
+				},
+				'3xl': {
+					$$SpaceY: '$space$3xl',
+				},
+				'4xl': {
+					$$SpaceY: '$space$4xl',
+				},
+				'5xl': {
+					$$SpaceY: '$space$5xl',
+				},
+				'6xl': {
+					$$SpaceY: '$space$6xl',
+				},
+				'7xl': {
+					$$SpaceY: '$space$7xl',
+				},
+				'8xl': {
+					$$SpaceY: '$space$8xl',
+				},
+				'9xl': {
+					$$SpaceY: '$space$9xl',
 				},
 			},
 			align: {
@@ -49,10 +122,10 @@
 			},
 			alignV: {
 				top: {
-					justifyContent: 'start',
+					justifyContent: 'flex-start',
 				},
 				bottom: {
-					justifyContent: 'end',
+					justifyContent: 'flex-end',
 				},
 				center: {
 					justifyContent: 'center',
@@ -60,10 +133,10 @@
 			},
 		},
 
-		defaultVariants: {
-			space: 'no',
-			// align: 'leading',
-		},
+		// defaultVariants: {
+		// 	space: 'no',
+		// 	// align: 'leading',
+		// },
 	})
 
 	// ss({ css })
@@ -71,6 +144,6 @@
 	// console.log({ css }, ss({ color, css }))
 </script>
 
-<Box cls={ss} vrt={{ space, align, alignV }} {css}>
+<Box cls={ss} vrt={{ gap, pad, align, alignV }} {css} {id}>
 	<slot />
 </Box>
