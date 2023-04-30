@@ -1,5 +1,5 @@
 import icon_twitter from './icons/twitter'
-import icon_discord from './icons/discord_new'
+import icon_discord from './icons/discord'
 import icon_rarible from './icons/rarible'
 import icon_opensea from './icons/opensea'
 import icon_email from './icons/email'
@@ -52,9 +52,9 @@ export const discord: SocialLink = {
 }
 
 export const email: SocialLink = {
-	look: 'felix',
 	...socialLinks.email,
 	...icon_email,
+	hex: '#5400fc',
 	transform: {
 		...transform.transform,
 		translate: {
@@ -80,7 +80,7 @@ export const medium: SocialLink = {
 	...socialLinks.medium,
 	...icon_medium,
 	...transform,
-	look: 'felix',
+	hex: '#5400fc',
 }
 
 export const socials: SocialLink[] = [
