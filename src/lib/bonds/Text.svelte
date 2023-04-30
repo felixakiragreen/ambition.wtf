@@ -1,20 +1,72 @@
 <script lang="ts">
 	import { stitch } from '@/ui'
-	import Span from '../atoms/Span.svelte'
-	import Para from '../atoms/Para.svelte'
-	import Heading from '../atoms/Heading.svelte'
+	import type { CSS } from '@/ui'
+	import { baseColors } from '@/types'
+
+	import { Span, Para, Heading } from '@/lib/atoms'
 
 	export let as = 'span'
 
-	export let css = null
-	export let size = null
-	export let mdx = null
-	export let look = null
-
 	export let id = null
+	export let css: CSS = null
+
+	export let look = null
+	export let br = null
+	export let nobr = null
+	export let size = null
+	export let color = null
+	export let align = null
+	export let mdx = null
 
 	const ss = stitch({
 		variants: {
+			look: {
+				heading: {
+					text: '$2xl',
+					// textTransform: 'uppercase',
+					fontWeight: '$black',
+					fontFamily: '$main',
+					'@md': {
+						text: '$3xl',
+					},
+				},
+				subheading: {
+					text: '$xl',
+					// textTransform: 'uppercase',
+					fontWeight: '$bold',
+					fontFamily: '$main',
+				},
+				subheading2: {
+					text: '$lg',
+					// textTransform: 'uppercase',
+					fontWeight: '$bold',
+					fontFamily: '$main',
+				},
+				mono: {
+					// textTransform: 'uppercase',
+					fontFamily: '$mono',
+				},
+				italic: {
+					fontStyle: 'italic',
+				},
+			},
+			// TODO: maybe breakpoints could be better
+			br: {
+				// breakpoints break
+				true: {
+					wordBreak: 'break-all',
+				},
+			},
+			nobr: {
+				true: {
+					whiteSpace: 'nowrap',
+				},
+			},
+
+			//
+			// defaults
+			//
+
 			size: {
 				xs: {
 					text: '$xs',
@@ -54,6 +106,26 @@
 				},
 				'9xl': {
 					text: '$9xl',
+				},
+			},
+			color: {
+				muted: {
+					color: '$muted',
+				},
+				// TODO: this might need to handle 400, darker, lighter
+				...baseColors.reduce(
+					(acc, color) => ({
+						...acc,
+						[color]: {
+							color: `$${color}400`,
+						},
+					}),
+					{},
+				),
+			},
+			align: {
+				center: {
+					textAlign: 'center',
 				},
 			},
 			mdx: {
@@ -157,17 +229,6 @@
 					fontWeight: '$semi',
 				},
 			},
-			look: {
-				subtitle: {
-					color: '$gold',
-					textTransform: 'uppercase',
-					fontWeight: '$semi',
-				},
-				mono: {
-					textTransform: 'uppercase',
-					fontFamily: '$mono',
-				},
-			},
 		},
 	})
 </script>
@@ -175,18 +236,19 @@
 {#if as.startsWith('h')}
 	<Heading
 		cls={ss}
-		vrt={{ size, mdx, look }}
+		vrt={{ size, color, align, mdx, look, br, nobr }}
 		{css}
 		h={parseInt(as.slice(-1))}
-		{id}>
+		{id}
+	>
 		<slot />
 	</Heading>
 {:else if as === 'p'}
-	<Para cls={ss} vrt={{ size, mdx, look }} {css}>
+	<Para cls={ss} vrt={{ size, color, align, mdx, look, br, nobr }} {css}>
 		<slot />
 	</Para>
 {:else}
-	<Span cls={ss} vrt={{ size, mdx, look }} {css}>
+	<Span cls={ss} vrt={{ size, color, align, mdx, look, br, nobr }} {css}>
 		<slot />
 	</Span>
 {/if}
