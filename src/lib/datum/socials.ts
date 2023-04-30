@@ -88,7 +88,7 @@ export const socials: SocialLink[] = [
 	email,
 	twitter,
 	discord,
-	rarible,
+	// rarible,
 	medium,
 	// opensea,
 ]
