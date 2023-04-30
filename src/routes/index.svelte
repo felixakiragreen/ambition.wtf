@@ -15,9 +15,9 @@
 		color: '$foreground',
 		fontFamily: '$mono',
 
-		'& h2': {
-			bg: '$red400',
-		},
+		// '& h2': {
+		// 	bg: '$red400',
+		// },
 	})
 
 	const ssAlt = stitch({
