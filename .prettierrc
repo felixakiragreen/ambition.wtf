@@ -1,9 +1,9 @@
 {
 	"useTabs": true,
 	"singleQuote": true,
-	"trailingComma": "es5",
+	"trailingComma": "all",
 	"printWidth": 80,
 	"semi": false,
 	"jsxSingleQuote": true,
-	"svelteBracketNewLine": false
+	"svelteBracketNewLine": true
 }
