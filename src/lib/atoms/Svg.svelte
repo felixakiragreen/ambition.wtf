@@ -10,6 +10,6 @@
 	// stroke-miter-limit={2}
 </script>
 
-<svg {viewBox} x="0%" y="0%" width="100%" height="100%">
+<svg {viewBox} x="0%" y="0%" width="100%" height="100%" {...$$props}>
 	<slot />
 </svg>
