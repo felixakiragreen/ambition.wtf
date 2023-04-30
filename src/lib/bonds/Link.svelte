@@ -1,18 +1,22 @@
 <script lang="ts">
 	import { stitch } from '@/ui'
-	import Anchor from '../atoms/Anchor.svelte'
+	import type { CSS } from '@/ui'
+
+	import { Anchor } from '@/lib/atoms'
+
+	export let css: CSS = {}
+	export let look = 'blocky'
 
 	export let url
+	export let fileName = undefined
 	export let newTab = false
-
-	export let css = null
-	export let look = 'blocky'
 
 	const ss = stitch({
 		variants: {
 			look: {
 				clean: {
 					textDecoration: 'none',
+					color: 'inherit',
 				},
 				blocky: {
 					// text: '$lg',
@@ -36,18 +40,17 @@
 						mx: '$-2',
 						// backgroundColor: '$felixgreen',
 						// color: '$indigo',
-						// color: '$background',
+						bg: '$primary',
+						color: '$primaryText',
 						cursor: 'pointer',
-						backgroundColor: '$highlight',
 
 						'& span': {},
 					},
 				},
 				blockinho: {
-					// color: '$highlight',
+					color: '$highlight',
 					// textDecoration: 'underline',
 					// color: '$foreground',
-					color: '$highlight',
 					textDecoration: 'none',
 					display: 'inline-block',
 					borderBottom: '1px solid currentcolor',
@@ -62,7 +65,6 @@
 					},
 
 					'&:hover': {
-						// color: '$foreground',
 						color: '$background',
 						cursor: 'pointer',
 						borderBottom: '1px solid transparent',
@@ -87,7 +89,7 @@
 	})
 </script>
 
-<Anchor cls={ss} vrt={{ look }} {css} {url} {newTab}>
+<Anchor cls={ss} vrt={{ look }} {css} {url} {fileName} {newTab} on:click>
 	<span>
 		<slot />
 	</span>
