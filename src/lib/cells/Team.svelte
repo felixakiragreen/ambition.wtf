@@ -17,11 +17,9 @@
 		display: 'grid',
 		justifyItems: 'center',
 		py: '$8',
-		'@initial': {
-			gridTemplateRows: 'repeat(auto-fit, 1fr)',
-			gridTemplateColumns: 'auto',
-			gap: '$16',
-		},
+		gridTemplateRows: 'repeat(auto-fit, 1fr)',
+		gridTemplateColumns: 'auto',
+		gap: '$16',
 		'@sm': {
 			gridTemplateRows: 'auto',
 			gridTemplateColumns: 'repeat(3, 1fr)',
@@ -37,9 +35,7 @@
 
 		'> img': {
 			mb: '$4',
-			'@initial': {
-				size: '$48',
-			},
+			size: '$48',
 			'@sm': {
 				size: '$36',
 			},
