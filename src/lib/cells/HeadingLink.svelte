@@ -24,9 +24,7 @@
 				background: '$felixgreen',
 			},
 			'&:after': {
-				'@initial': {
-					content: '',
-				},
+				content: '',
 				'@md': {
 					content: ' tf',
 				},
