@@ -23,9 +23,7 @@
 			gapV="sm"
 			css={{
 				justifyContent: 'space-between',
-				'@initial': {
-					py: '$0',
-				},
+				py: '$0',
 				'@sm': {
 					py: '$2',
 				},
@@ -47,9 +45,7 @@
 						url={logo}
 						alt="Ambition logo"
 						css={{
-							'@initial': {
-								height: '$12',
-							},
+							height: '$12',
 							'@sm': {
 								height: '$16',
 							},
@@ -57,9 +53,7 @@
 					/>
 					<Text
 						css={{
-							'@initial': {
-								text: '$3xl',
-							},
+							text: '$3xl',
 							'@sm': {
 								text: '$4xl',
 							},
