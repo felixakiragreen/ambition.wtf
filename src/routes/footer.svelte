@@ -21,9 +21,7 @@
 			gapV="sm"
 			css={{
 				justifyContent: 'space-between',
-				'@initial': {
-					py: '$0',
-				},
+				py: '$0',
 				'@sm': {
 					py: '$2',
 				},
