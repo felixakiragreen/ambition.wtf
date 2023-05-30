@@ -131,9 +131,7 @@
 			mdx: {
 				h1: {
 					fontWeight: '$bold',
-					'@initial': {
-						text: '$4xl',
-					},
+					text: '$4xl',
 					'@md': {
 						text: '$5xl',
 					},
@@ -141,45 +139,34 @@
 				h2: {
 					fontWeight: '$bold',
 					my: '$3',
-					'@initial': {
-						text: '$3xl',
-					},
+					text: '$3xl',
 					'@md': {
 						text: '$4xl',
 					},
 				},
 				h3: {
 					fontWeight: '$bold',
-					'@initial': {
-						text: '$2xl',
-					},
+					text: '$2xl',
 					'@md': {
 						text: '$3xl',
 					},
 				},
 				h4: {
-					text: '$2xl',
-					'@initial': {
-						text: '$xl',
-					},
+					text: '$xl',
 					'@md': {
 						text: '$2xl',
 					},
 				},
 				h5: {
 					fontWeight: '$bold',
-					'@initial': {
-						text: '$lg',
-					},
+					text: '$lg',
 					'@md': {
 						text: '$xl',
 					},
 				},
 				h6: {
 					fontWeight: '$bold',
-					'@initial': {
-						text: '$md',
-					},
+					text: '$md',
 					'@md': {
 						text: '$lg',
 					},
@@ -190,9 +177,7 @@
 					// text: '$lg',
 					// fontWeight: '$semi',
 					lineHeight: '$lg',
-					'@initial': {
-						text: '$sm',
-					},
+					text: '$sm',
 					'@sm': {
 						text: '$md',
 					},
