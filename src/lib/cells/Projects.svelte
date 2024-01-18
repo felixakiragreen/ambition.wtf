@@ -25,7 +25,7 @@
 >
 	<Box css={{ height: '$8' }} />
 
-	<Link url={'https://playgolos.com'} newTab look="clean">
+	<Link url={'https://lifetower.app'} newTab look="clean">
 		<Image url={golos} css={{ width: '100%' }} />
 	</Link>
 	<Text size="xl" css={{ fontWeight: '$bold' }}
